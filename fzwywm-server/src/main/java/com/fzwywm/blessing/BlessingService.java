@@ -1,6 +1,8 @@
 package com.fzwywm.blessing;
 
 import com.fzwywm.common.ApiException;
+import com.fzwywm.fortune.FortuneActionResult;
+import com.fzwywm.fortune.FortuneService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -17,6 +19,7 @@ public class BlessingService {
     private static final int MAX_CONTENT = 80;
     private static final int DAILY_LIMIT = 20;
     private static final int MIN_SECONDS_BETWEEN_POSTS = 5;
+    private static final int MAX_PAGE = 10000;
 
     private static final Set<String> BLOCKED_WORDS = Set.of(
             "赌博", "博彩", "色情", "毒品", "枪支", "代写", "刷单",
@@ -24,25 +27,28 @@ public class BlessingService {
     );
 
     private final BlessingMapper blessingMapper;
+    private final FortuneService fortuneService;
 
-    public BlessingService(BlessingMapper blessingMapper) {
+    public BlessingService(BlessingMapper blessingMapper, FortuneService fortuneService) {
         this.blessingMapper = blessingMapper;
+        this.fortuneService = fortuneService;
     }
 
     public List<BlessingDto> list(int page, int size) {
         int safeSize = Math.max(1, Math.min(50, size));
-        int safePage = Math.max(1, page);
+        int safePage = Math.max(1, Math.min(MAX_PAGE, page));
         return BlessingDto.from(blessingMapper.listVisible(safeSize, (safePage - 1) * safeSize));
     }
 
     @Transactional
-    public BlessingDto create(String token, BlessingRequest request, String ip) {
+    public BlessingCreateResult create(String token, BlessingRequest request, String ip) {
         if (request == null) {
             throw ApiException.badRequest("昵称和祝福内容都要写上哦");
         }
 
         String nickname = normalize(request.nickname());
         String content = normalize(request.content());
+        LocalDate today = LocalDate.now();
 
         if (nickname.isEmpty() || content.isEmpty()) {
             throw ApiException.badRequest("昵称和祝福内容都要写上哦");
@@ -56,7 +62,7 @@ public class BlessingService {
         if (containsBlockedWord(nickname + " " + content)) {
             throw ApiException.badRequest("内容里有不适合展示的词汇，换一句试试吧");
         }
-        if (blessingMapper.countByVisitorSince(token, LocalDate.now().atStartOfDay()) >= DAILY_LIMIT) {
+        if (blessingMapper.countByVisitorSince(token, today.atStartOfDay()) >= DAILY_LIMIT) {
             throw ApiException.tooManyRequests("今天已经贴了很多祝福，明天再来吧");
         }
 
@@ -74,8 +80,15 @@ public class BlessingService {
         blessing.setIp(ip);
         blessing.setCreatedAt(LocalDateTime.now());
         blessingMapper.insert(blessing);
+        FortuneActionResult award = fortuneService.awardBlessing(token, today);
 
-        return BlessingDto.from(blessing);
+        return new BlessingCreateResult(
+                BlessingDto.from(blessing),
+                award.fortune(),
+                award.max(),
+                award.awarded(),
+                award.duplicate()
+        );
     }
 
     private boolean containsBlockedWord(String text) {

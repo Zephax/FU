@@ -15,6 +15,7 @@ import java.util.Set;
 public class FortuneService {
 
     private static final int MAX_FORTUNE = 100;
+    private static final int BLESS_POINTS = 10;
     private static final Set<String> LAMP_REFS = Set.of("1", "2", "3", "4", "5");
     private static final Set<String> FLIP_REFS = Set.of("1", "2", "3");
 
@@ -78,18 +79,13 @@ public class FortuneService {
                 }
                 points = 6;
             }
-            case "BLESS" -> {
-                ref = "daily";
-                points = 10;
-            }
+            case "BLESS" -> throw ApiException.badRequest("祝福加分已随留言自动发放，请直接发布祝福");
             default -> throw ApiException.badRequest("未知的互动类型");
         }
 
         LocalDate today = LocalDate.now();
         int inserted = interactionMapper.insertIgnore(token, action, ref, points, today);
-        if (inserted > 0) {
-            visitorService.addFortune(token, points);
-        }
+        int awarded = inserted > 0 ? addPoints(token, points) : 0;
 
         Visitor visitor = visitorService.require(token);
         String text = "DRAW".equals(action)
@@ -99,9 +95,34 @@ public class FortuneService {
         return new FortuneActionResult(
                 visitor.getFortune(),
                 MAX_FORTUNE,
-                inserted > 0 ? points : 0,
+                awarded,
                 inserted == 0,
                 text
         );
+    }
+
+    @Transactional
+    public FortuneActionResult awardBlessing(String token, LocalDate day) {
+        int inserted = interactionMapper.insertIgnore(token, "BLESS", "daily", BLESS_POINTS, day);
+        int awarded = inserted > 0 ? addPoints(token, BLESS_POINTS) : 0;
+        Visitor visitor = visitorService.require(token);
+
+        return new FortuneActionResult(
+                visitor.getFortune(),
+                MAX_FORTUNE,
+                awarded,
+                inserted == 0,
+                null
+        );
+    }
+
+    private int addPoints(String token, int points) {
+        Visitor visitor = visitorService.lock(token);
+        int current = visitor == null || visitor.getFortune() == null ? 0 : visitor.getFortune();
+        int actual = Math.max(0, Math.min(MAX_FORTUNE, current + points) - current);
+        if (actual > 0) {
+            visitorService.addFortune(token, points);
+        }
+        return actual;
     }
 }

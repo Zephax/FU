@@ -38,6 +38,10 @@ public class VisitorService {
         return visitor;
     }
 
+    public Visitor lock(String token) {
+        return visitorMapper.findForUpdate(token);
+    }
+
     public void addFortune(String token, int points) {
         visitorMapper.addFortune(token, points);
     }

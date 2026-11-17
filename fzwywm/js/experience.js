@@ -112,9 +112,13 @@
                 dailyText = result.text || dailyText;
                 lotteryResult.textContent = dailyText || '今日福签已送达';
                 setFortune(result.fortune, result.max);
-                toast(result.duplicate
-                    ? '今天已经抽过签了，明天再来看看'
-                    : '福签已出：福气 +' + result.awarded);
+                if (result.duplicate) {
+                    toast('今天已经抽过签了，明天再来看看');
+                } else if (result.awarded > 0) {
+                    toast('福签已出：福气 +' + result.awarded);
+                } else {
+                    toast('福签已出，福气已经满格');
+                }
                 lockDraw();
             }, 900);
         }).catch(function (error) {
@@ -146,7 +150,11 @@
                 toast('这盏灯今天已经点亮过了');
                 return;
             }
-            toast('福灯已点亮：福气 +' + result.awarded);
+            if (result.awarded > 0) {
+                toast('福灯已点亮：福气 +' + result.awarded);
+            } else {
+                toast('福灯已点亮，福气已经满格');
+            }
             if (litCount === 5) {
                 setTimeout(function () {
                     toast('五盏福灯全亮，愿你所求皆有回响');
@@ -167,9 +175,13 @@
         card.classList.add('flipped');
         api.act('FLIP', String(index + 1)).then(function (result) {
             setFortune(result.fortune, result.max);
-            toast(result.duplicate
-                ? '这张牌今天已经翻过啦'
-                : '福俗卡已翻开：福气 +' + result.awarded);
+            if (result.duplicate) {
+                toast('这张牌今天已经翻过啦');
+            } else if (result.awarded > 0) {
+                toast('福俗卡已翻开：福气 +' + result.awarded);
+            } else {
+                toast('福俗卡已翻开，福气已经满格');
+            }
         }).catch(fail);
     }
 
@@ -241,17 +253,16 @@
             submitBtn.textContent = '正在贴上…';
         }
 
-        api.createBlessing(username, content).then(function () {
+        api.createBlessing(username, content).then(function (result) {
             blessForm.reset();
-            return api.act('BLESS', 'daily').then(function (result) {
-                setFortune(result.fortune, result.max);
-                toast(result.duplicate
-                    ? '祝福已贴上墙，今天的心意已记录'
-                    : '祝福已贴上墙：福气 +' + result.awarded);
-            }, function () {
-                toast('祝福已贴上墙');
-            });
-        }).then(function () {
+            setFortune(result.fortune, result.max);
+            if (result.awarded > 0) {
+                toast('祝福已贴上墙：福气 +' + result.awarded);
+            } else if (result.duplicate) {
+                toast('祝福已贴上墙，今天的心意已记录');
+            } else {
+                toast('祝福已贴上墙，福气已经满格');
+            }
             loadBlessings();
         }).catch(fail).then(function () {
             if (submitBtn) {

@@ -79,12 +79,12 @@
 | GET | `/api/health` | 健康检查 |
 | GET | `/api/stats` | 祝福、点灯、抽签、访客统计 |
 | GET | `/api/blessings?page=&size=` | 分页读取祝福墙 |
-| POST | `/api/blessings` | 发布祝福 |
+| POST | `/api/blessings` | 发布祝福，并自动发放当日留言福气（每日一次） |
 | GET | `/api/fortune` | 当前访客的福气值与互动状态 |
 | GET | `/api/fortune/daily` | 今日福签 |
-| POST | `/api/fortune/actions` | 抽签 / 点灯 / 翻牌 / 留言加分 |
+| POST | `/api/fortune/actions` | 抽签 / 点灯 / 翻牌加分 |
 
-访客通过 `FY_VISITOR` Cookie 识别，无需登录。
+留言加分随祝福发布自动完成，不再单独调用 `BLESS`。访客通过 `FY_VISITOR` Cookie 识别，无需登录。
 
 ## 目录结构
 

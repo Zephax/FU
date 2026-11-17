@@ -32,9 +32,9 @@ public class BlessingController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public BlessingDto create(@RequestAttribute(VisitorInterceptor.ATTR_TOKEN) String token,
-                              @RequestBody BlessingRequest request,
-                              HttpServletRequest httpRequest) {
+    public BlessingCreateResult create(@RequestAttribute(VisitorInterceptor.ATTR_TOKEN) String token,
+                                       @RequestBody BlessingRequest request,
+                                       HttpServletRequest httpRequest) {
         return blessingService.create(token, request, httpRequest.getRemoteAddr());
     }
 }
