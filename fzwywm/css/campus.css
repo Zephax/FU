@@ -1,0 +1,584 @@
+/* ================= 校园福韵 · F 型布局 + 科幻像素主题 ================= */
+
+body.campus{
+    --paper:#F5F8FB;
+    --ink:#0F2739;
+    --ink-2:#2B4C63;
+    --line:#C9DCE9;
+    --blue:#3474A6;
+    --blue-d:#1F4E79;
+    --gold:#FFD55A;
+    --cyan:#7FE7FF;
+    --deep:#0A2136;
+
+    background-color:var(--paper);
+    background-image:
+        linear-gradient(rgba(31,78,121,.045) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(31,78,121,.045) 1px,transparent 1px);
+    background-size:28px 28px;
+    color:var(--ink);
+}
+
+/* ================= F 的第一横：顶部通栏 ================= */
+body.campus .f-hero{
+    position:relative;
+    overflow:hidden;
+    padding:66px 0 0;
+    color:#fff;
+    background:
+        radial-gradient(780px 460px at 12% 6%,rgba(52,116,166,.55),transparent 70%),
+        radial-gradient(620px 380px at 88% 0%,rgba(255,213,90,.14),transparent 66%),
+        linear-gradient(165deg,#081B2E 0%,#0E3352 52%,#0A2136 100%);
+}
+
+body.campus .f-hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image:
+        linear-gradient(rgba(127,231,255,.18) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(127,231,255,.18) 1px,transparent 1px);
+    background-size:56px 56px;
+    transform:perspective(600px) rotateX(54deg) scale(1.7);
+    transform-origin:bottom center;
+    opacity:.3;
+    -webkit-mask-image:linear-gradient(to top,#000,transparent 74%);
+    mask-image:linear-gradient(to top,#000,transparent 74%);
+}
+
+body.campus .f-hero-inner{
+    position:relative;
+    z-index:1;
+    display:grid;
+    grid-template-columns:minmax(0,1.16fr) minmax(0,.84fr);
+    gap:46px;
+    align-items:center;
+    padding-bottom:46px;
+}
+
+body.campus .hud-line{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:20px;
+    padding:6px 12px;
+    font-family:var(--font-label);
+    font-size:12px;
+    letter-spacing:.2em;
+    color:var(--cyan);
+    border:1px solid rgba(127,231,255,.35);
+    background:rgba(127,231,255,.06);
+}
+
+body.campus .hud-line .dot{
+    width:6px;
+    height:6px;
+    background:var(--gold);
+    box-shadow:0 0 10px var(--gold);
+    animation:cp-blink 1.6s steps(2) infinite alternate;
+}
+
+@keyframes cp-blink{
+    from{opacity:.3}
+    to{opacity:1}
+}
+
+body.campus .f-hero h1{
+    margin:0 0 16px;
+    font-family:'Songti SC','SimSun','STSong',serif;
+    font-size:clamp(42px,7vw,86px);
+    line-height:.98;
+    letter-spacing:.08em;
+    color:#fff;
+    text-shadow:5px 5px 0 rgba(255,213,90,.55);
+}
+
+body.campus .f-hero .lead{
+    max-width:560px;
+    margin:0 0 26px;
+    padding-left:16px;
+    border-left:3px solid var(--gold);
+    font-size:16px;
+    line-height:1.95;
+    color:#CFE8F6;
+}
+
+body.campus .cta-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+}
+
+body.campus .btn-pixel{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:13px 24px;
+    color:#08202F;
+    background:var(--gold);
+    font-size:14px;
+    font-weight:800;
+    letter-spacing:.05em;
+    text-decoration:none;
+    transition:.25s;
+}
+
+body.campus .btn-pixel:hover{
+    background:#FFE382;
+    transform:translate(-2px,-2px);
+    filter:drop-shadow(5px 5px 0 rgba(10,33,54,.85));
+}
+
+body.campus .btn-ghost{
+    display:inline-flex;
+    align-items:center;
+    padding:13px 22px;
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:.05em;
+    color:#CFE8F6;
+    text-decoration:none;
+    border:1px solid rgba(127,231,255,.4);
+    background:rgba(127,231,255,.06);
+    transition:.25s;
+}
+
+body.campus .btn-ghost:hover{
+    color:var(--gold);
+    border-color:var(--gold);
+    background:rgba(255,213,90,.08);
+}
+
+/* 右侧 HUD 数据面板 */
+body.campus .data-panel{
+    position:relative;
+    padding:24px 24px 20px;
+    border:1px solid rgba(127,231,255,.35);
+    background:rgba(10,33,54,.4);
+    -webkit-backdrop-filter:blur(6px);
+    backdrop-filter:blur(6px);
+}
+
+body.campus .data-panel .panel-title{
+    display:block;
+    margin-bottom:16px;
+    font-family:var(--font-label);
+    font-size:11px;
+    letter-spacing:.22em;
+    color:var(--cyan);
+}
+
+body.campus .data-row{
+    padding:10px 0;
+    border-bottom:1px dashed rgba(127,231,255,.22);
+}
+
+body.campus .data-row:last-child{
+    border-bottom:0;
+    padding-bottom:0;
+}
+
+body.campus .data-row .k{
+    font-size:12px;
+    letter-spacing:.1em;
+    color:#9FC4DC;
+}
+
+body.campus .data-row .v{
+    display:block;
+    margin:3px 0 8px;
+    font-family:var(--font-label);
+    font-size:20px;
+    letter-spacing:.02em;
+    color:var(--gold);
+}
+
+body.campus .data-row .v em{
+    font-style:normal;
+    font-size:12px;
+    color:#CFE8F6;
+    margin-left:4px;
+}
+
+body.campus .bar{
+    height:4px;
+    background:rgba(127,231,255,.16);
+}
+
+body.campus .bar span{
+    display:block;
+    height:100%;
+    background-image:repeating-linear-gradient(90deg,var(--gold) 0 6px,transparent 6px 10px);
+}
+
+/* ================= F 的第二横：三张入口卡 ================= */
+body.campus .f-bar{
+    padding:66px 0 74px;
+}
+
+body.campus .bar-head{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:flex-end;
+    justify-content:space-between;
+    gap:16px;
+    margin-bottom:34px;
+    padding-bottom:14px;
+    border-bottom:2px solid var(--blue-d);
+}
+
+body.campus .bar-head h2{
+    margin:0;
+    font-family:'Songti SC','SimSun',serif;
+    font-size:clamp(26px,3.2vw,36px);
+    letter-spacing:.06em;
+    color:var(--blue-d);
+}
+
+body.campus .bar-head .rubric{
+    display:inline-block;
+    margin-bottom:10px;
+    padding-bottom:6px;
+    font-family:var(--font-label);
+    font-size:11px;
+    letter-spacing:.24em;
+    color:var(--blue);
+    border-bottom:2px solid var(--gold);
+}
+
+body.campus .bar-head .page{
+    font-family:var(--font-label);
+    font-size:11px;
+    letter-spacing:.16em;
+    color:#5C7A93;
+}
+
+body.campus .entry-row{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:26px;
+}
+
+body.campus .entry{
+    position:relative;
+    overflow:hidden;
+    background:#fff;
+    border:1px solid var(--line);
+    filter:drop-shadow(0 10px 22px rgba(31,78,121,.1));
+    transition:transform .3s ease,filter .3s ease;
+}
+
+body.campus .entry:hover{
+    transform:translateY(-9px);
+    filter:drop-shadow(0 22px 34px rgba(31,78,121,.22));
+}
+
+body.campus .entry .ph{
+    position:relative;
+    height:208px;
+    overflow:hidden;
+}
+
+body.campus .entry .ph img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:transform .6s ease;
+}
+
+body.campus .entry:hover .ph img{
+    transform:scale(1.05);
+}
+
+body.campus .entry .ph::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to top,rgba(10,33,54,.45),transparent 58%);
+}
+
+body.campus .entry .ph .strip{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    height:8px;
+    background-image:repeating-linear-gradient(90deg,var(--gold) 0 6px,transparent 6px 14px);
+    opacity:.78;
+}
+
+body.campus .entry .idx{
+    position:absolute;
+    top:12px;
+    left:12px;
+    z-index:3;
+    padding:3px 8px;
+    font-family:var(--font-label);
+    font-size:12px;
+    letter-spacing:.14em;
+    color:#08202F;
+    background:var(--gold);
+    box-shadow:0 0 14px rgba(255,213,90,.5);
+}
+
+body.campus .entry .body{
+    padding:22px 24px 26px;
+}
+
+body.campus .entry .chip{
+    display:inline-block;
+    margin-bottom:12px;
+    padding:4px 9px;
+    font-family:var(--font-label);
+    font-size:10.5px;
+    letter-spacing:.16em;
+    color:#08202F;
+    background:var(--gold);
+}
+
+body.campus .entry h3{
+    margin:0 0 10px;
+    font-family:'Songti SC','SimSun',serif;
+    font-size:21px;
+    letter-spacing:.05em;
+    color:var(--blue-d);
+}
+
+body.campus .entry p{
+    margin:0 0 10px;
+    font-size:13.5px;
+    line-height:1.95;
+    color:var(--ink-2);
+    text-align:justify;
+}
+
+body.campus .entry .more{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    margin-top:6px;
+    padding-bottom:3px;
+    font-family:var(--font-label);
+    font-size:11.5px;
+    letter-spacing:.16em;
+    color:var(--blue-d);
+    text-decoration:none;
+    border-bottom:2px solid var(--gold);
+}
+
+body.campus .entry .more:hover{
+    color:#08202F;
+    background:rgba(255,213,90,.28);
+}
+
+/* ================= F 的竖干：左窄栏 + 右正文 ================= */
+body.campus .f-stem{
+    padding:0 0 80px;
+}
+
+body.campus .stem-grid{
+    display:grid;
+    grid-template-columns:300px minmax(0,1fr);
+    gap:48px;
+    align-items:start;
+}
+
+body.campus .stem-aside{
+    position:sticky;
+    top:96px;
+    padding:24px 22px 20px;
+    background:#fff;
+    border:1px solid var(--line);
+    border-top:4px solid var(--gold);
+    filter:drop-shadow(0 12px 26px rgba(31,78,121,.12));
+}
+
+body.campus .stem-aside .aside-title{
+    margin:0 0 6px;
+    font-family:'Songti SC','SimSun',serif;
+    font-size:20px;
+    letter-spacing:.06em;
+    color:var(--blue-d);
+}
+
+body.campus .stem-aside .aside-sub{
+    margin:0 0 16px;
+    font-family:var(--font-label);
+    font-size:10.5px;
+    letter-spacing:.18em;
+    color:#5C7A93;
+}
+
+body.campus .m-row{
+    display:grid;
+    grid-template-columns:26px minmax(0,1fr);
+    gap:10px;
+    padding:12px 0;
+    border-bottom:1px dashed rgba(31,78,121,.2);
+}
+
+body.campus .m-row:last-child{
+    border-bottom:0;
+    padding-bottom:0;
+}
+
+body.campus .m-row .m-no{
+    font-family:var(--font-label);
+    font-size:11px;
+    color:var(--blue);
+    padding-top:3px;
+}
+
+body.campus .m-row .m-k{
+    display:block;
+    margin-bottom:4px;
+    font-size:11.5px;
+    letter-spacing:.14em;
+    color:#5C7A93;
+}
+
+body.campus .m-row .m-v{
+    display:block;
+    font-family:'Songti SC','SimSun',serif;
+    font-size:15px;
+    letter-spacing:.06em;
+    line-height:1.7;
+    color:var(--blue-d);
+}
+
+body.campus .stem-main{
+    display:grid;
+    gap:28px;
+}
+
+body.campus .stem-article{
+    position:relative;
+    padding:30px 34px 32px;
+    background:#fff;
+    border:1px solid var(--line);
+    filter:drop-shadow(0 10px 24px rgba(31,78,121,.1));
+}
+
+body.campus .stem-article::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:26px;
+    bottom:26px;
+    width:2px;
+    background:var(--cinnabar);
+}
+
+body.campus .stem-article .rubric{
+    display:inline-block;
+    margin-bottom:12px;
+    font-family:var(--font-label);
+    font-size:11px;
+    letter-spacing:.22em;
+    color:var(--blue);
+}
+
+body.campus .stem-article h3{
+    margin:0 0 14px;
+    font-family:'Songti SC','SimSun',serif;
+    font-size:clamp(21px,2.4vw,26px);
+    letter-spacing:.05em;
+    color:var(--blue-d);
+}
+
+body.campus .stem-article p{
+    margin:0 0 12px;
+    font-size:14px;
+    line-height:2;
+    color:var(--ink-2);
+    text-align:justify;
+}
+
+body.campus .stem-article p:last-child{
+    margin-bottom:0;
+}
+
+body.campus .stem-article p .hl{
+    padding:1px 4px;
+    color:#08202F;
+    background:rgba(255,213,90,.55);
+}
+
+/* 官网引用块 */
+body.campus .site-note{
+    padding:24px 28px;
+    border-left:4px solid var(--blue-d);
+    background:linear-gradient(90deg,rgba(52,116,166,.1),rgba(255,213,90,.14) 55%,transparent);
+}
+
+body.campus .site-note strong{
+    display:block;
+    margin-bottom:10px;
+    font-family:'Songti SC','SimSun',serif;
+    font-size:17px;
+    letter-spacing:.05em;
+    color:var(--blue-d);
+}
+
+body.campus .site-note p{
+    margin:0 0 12px;
+    font-size:13.5px;
+    line-height:1.95;
+    color:var(--ink-2);
+    text-align:justify;
+}
+
+body.campus .site-note a{
+    font-family:var(--font-label);
+    font-size:12px;
+    letter-spacing:.1em;
+    font-weight:700;
+    color:var(--blue-d);
+    text-decoration:none;
+    border-bottom:2px solid var(--gold);
+}
+
+body.campus .site-note a:hover{
+    color:#08202F;
+    background:rgba(255,213,90,.3);
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:1000px){
+    body.campus .f-hero-inner{
+        grid-template-columns:1fr;
+        gap:30px;
+    }
+
+    body.campus .stem-grid{
+        grid-template-columns:1fr;
+        gap:26px;
+    }
+
+    body.campus .stem-aside{
+        position:static;
+    }
+
+    body.campus .entry-row{
+        grid-template-columns:1fr;
+    }
+}
+
+@media (max-width:620px){
+    body.campus .f-hero{
+        padding-top:56px;
+    }
+
+    body.campus .f-hero .lead{
+        font-size:15px;
+    }
+
+    body.campus .stem-article{
+        padding:24px 22px 26px;
+    }
+
+    body.campus .entry .ph{
+        height:184px;
+    }
+}

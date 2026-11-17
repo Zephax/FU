@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#081A2A">
+    <meta name="description" content="教学楼、图书馆、文体场馆互动档案与校园示意平面图，看看校园建筑的一天。">
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="福韵校园·福满榕城">
+    <meta property="og:description" content="福州外语外贸学院福文化主题网站：数字文化刊物与轻量 HUD 信息界面。">
+    <meta property="og:image" content="./assets/og-cover.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>校园建筑 | 福韵校园·福满榕城</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/hud.css">
+    <link rel="stylesheet" href="./css/building.css">
+    <link rel="stylesheet" href="./css/theme-v2.css">
+</head>
+<body class="building">
+
+<header class="hud-header">
+    <div class="container nav-wrap">
+        <a class="logo logo-emblem-lockup" href="index.html" aria-label="福韵校园·福满榕城首页" title="福韵校园·福满榕城">
+            <img class="logo-emblem" src="./assets/logo-emblem.svg" alt="" width="240" height="84">
+            <span class="logo-word"><b>福韵校园</b><em>福满榕城</em></span>
+        </a>
+
+        <nav aria-label="主导航">
+            <ul class="nav-list">
+                <li><a href="index.html"><i>01</i>首页</a></li>
+                <li><a href="campus.html" class="active"><i>02</i>校园福韵</a></li>
+                <li><a href="fuzhou.html"><i>03</i>福满榕城</a></li>
+                <li><a href="experience.html"><i>04</i>福文化体验</a></li>
+                <li><a href="about.html"><i>05</i>关于我们</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- 顶部通栏 -->
+<section class="hero">
+    <div class="container hero-inner">
+        <div>
+            <div class="hud-line">
+                <span class="dot"></span>SYS://FZFU-BUILDING · 02.1
+                <span class="hud-coords" aria-hidden="true">NODE · CAMPUS / SIG ▮▮▮▯</span>
+            </div>
+            <a href="campus.html" class="crumb">← 返回校园福韵</a>
+            <h1>校园建筑</h1>
+            <p class="lead">
+                建筑是校园最沉默的老师。它安排好了光从哪扇窗进来、风在哪条廊道穿过、
+                你在哪个转角会遇到同学。福州外语外贸学院的每一栋楼，
+                都在替这所学校说话。
+            </p>
+        </div>
+
+        <div class="hero-tags">
+            <span>BUILDING 01 · 教学</span>
+            <span>BUILDING 02 · 阅读</span>
+            <span>BUILDING 03 · 运动</span>
+        </div>
+    </div>
+</section>
+
+<!-- 互动舞台 -->
+<section class="stage-sec">
+    <div class="container">
+        <div class="sec-head">
+            <div>
+                <span class="rubric">INTERACTIVE / 建筑档案</span>
+                <h2>点开一栋楼，看它的一天</h2>
+            </div>
+            <span class="hint">← 点击左侧标签 / 点击下方平面图</span>
+        </div>
+
+        <div class="stage-wrap">
+            <div class="tab-col" id="tabCol">
+                <button class="tab active" data-key="teach" type="button">
+                    <span class="no">01</span>
+                    <span class="t">教学楼</span>
+                    <span class="en">TEACHING</span>
+                </button>
+
+                <button class="tab" data-key="lib" type="button">
+                    <span class="no">02</span>
+                    <span class="t">图书馆</span>
+                    <span class="en">LIBRARY</span>
+                </button>
+
+                <button class="tab" data-key="sport" type="button">
+                    <span class="no">03</span>
+                    <span class="t">文体场馆</span>
+                    <span class="en">SPORTS</span>
+                </button>
+            </div>
+
+            <div class="stage">
+                <figure class="stage-media" id="stageMedia">
+                    <img loading="lazy" decoding="async" id="stageImg" src="image/webp/滨海教学楼-1600.webp" srcset="image/webp/滨海教学楼-640.webp 640w, image/webp/滨海教学楼-1024.webp 1024w, image/webp/滨海教学楼-1600.webp 1600w" sizes="(max-width: 1000px) 92vw, 420px" alt="教学楼">
+                    <span class="strip"></span>
+                    <figcaption id="stageCap">PHOTO 01 / 教学楼 · 滨海校区</figcaption>
+                </figure>
+
+                <div class="stage-info">
+                    <span class="chip" id="stageChip">TEACHING · 教学楼</span>
+                    <h3 id="stageTitle">教学楼</h3>
+                    <p id="stageDesc1">
+                        宽敞明亮的教学场所，是同学们汲取知识、课堂研讨的主要阵地。
+                        铃声落下，走廊会在几十秒里被脚步填满，又在下一节课的铃声中重新安静。
+                    </p>
+                    <p id="stageDesc2">
+                        楼里的每一间教室都有自己的时刻表：上午是专业课的板书声，
+                        下午是小组讨论的低声争辩，傍晚偶尔留下几个还在改作业的人。
+                    </p>
+                    <ul class="spec" id="stageSpec">
+                        <li><b>关键词</b><span>课堂 · 研讨 · 自习</span></li>
+                        <li><b>日常</b><span>清晨到夜晚，灯火接力</span></li>
+                        <li><b>福气</b><span>求知得解，是校园的第一种福</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 校园建筑图谱 -->
+<section class="map-sec">
+    <div class="container">
+        <div class="sec-head">
+            <div>
+                <span class="rubric">MAP / 校园图谱</span>
+                <h2>一张图，串起三栋楼</h2>
+            </div>
+            <span class="hint">点击方块定位建筑</span>
+        </div>
+
+        <div class="map-wrap">
+            <div class="map-panel">
+                <div class="panel-title">
+                    <span>CAMPUS PLAN · SCHEMATIC</span>
+                    <span>TOP VIEW</span>
+                </div>
+
+                <svg viewBox="0 0 420 260" role="img" aria-label="校园建筑示意平面图">
+                    <!-- 地界 -->
+                    <rect x="8" y="8" width="404" height="244" fill="none" stroke="rgba(127,231,255,.35)" stroke-width="1"/>
+                    <!-- 网格 -->
+                    <g stroke="rgba(127,231,255,.14)" stroke-width="1">
+                        <line x1="68" y1="8" x2="68" y2="252"/>
+                        <line x1="128" y1="8" x2="128" y2="252"/>
+                        <line x1="188" y1="8" x2="188" y2="252"/>
+                        <line x1="248" y1="8" x2="248" y2="252"/>
+                        <line x1="308" y1="8" x2="308" y2="252"/>
+                        <line x1="368" y1="8" x2="368" y2="252"/>
+                        <line x1="8" y1="68" x2="412" y2="68"/>
+                        <line x1="8" y1="128" x2="412" y2="128"/>
+                        <line x1="8" y1="188" x2="412" y2="188"/>
+                    </g>
+
+                    <!-- 湖 -->
+                    <ellipse cx="330" cy="196" rx="52" ry="30" fill="rgba(52,116,166,.35)" stroke="rgba(127,231,255,.4)" stroke-width="1"/>
+                    <text x="330" y="233" fill="#7FE7FF" font-family="'Courier New',monospace" font-size="9" text-anchor="middle" letter-spacing="1">LAKE</text>
+
+                    <!-- 教学楼 -->
+                    <g class="node active" data-key="teach">
+                        <rect x="34" y="44" width="120" height="70" rx="4"/>
+                        <text x="94" y="72">TEACHING</text>
+                        <text x="94" y="88">教学楼</text>
+                    </g>
+
+                    <!-- 图书馆 -->
+                    <g class="node" data-key="lib">
+                        <rect x="178" y="88" width="110" height="66" rx="4"/>
+                        <text x="233" y="112">LIBRARY</text>
+                        <text x="233" y="128">图书馆</text>
+                    </g>
+
+                    <!-- 文体场馆 -->
+                    <g class="node" data-key="sport">
+                        <rect x="70" y="158" width="128" height="66" rx="4"/>
+                        <text x="134" y="182">SPORTS</text>
+                        <text x="134" y="198">文体场馆</text>
+                    </g>
+
+                    <!-- 主路 -->
+                    <path d="M20 240 L400 20" stroke="rgba(166,59,38,.55)" stroke-width="1.5" stroke-dasharray="6 6"/>
+
+                    <!-- 罗盘 -->
+                    <g fill="#7FE7FF" font-family="'Courier New',monospace" font-size="9" letter-spacing="1">
+                        <text x="366" y="34">N ↑</text>
+                    </g>
+                </svg>
+            </div>
+
+            <aside class="map-note">
+                <h3>为什么这样走</h3>
+                <p>
+                    从教学楼的走廊出发，往图书馆的方向走，刚好会经过一段没有遮挡的直道——
+                    上午的阳光正好落在路面上；再往西折，是文体场馆的方向，
+                    傍晚的风从操场那头吹过来。
+                </p>
+                <p>
+                    三栋楼的距离，其实是校园生活的三种节奏：上课、读书、运动。
+                    走完这一圈，也就走完了一天。
+                </p>
+                <div class="key">
+                    <span>LEARN</span>
+                    <span>READ</span>
+                    <span>MOVE</span>
+                    <span>LIVE</span>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
+
+<!-- 建筑档案磁贴 -->
+<section class="tiles-sec">
+    <div class="container">
+        <div class="sec-head">
+            <div>
+                <span class="rubric">DETAILS / 建筑细节</span>
+                <h2>四件小事，构成建筑的温度</h2>
+            </div>
+            <span class="hint">HOVER TO READ</span>
+        </div>
+
+        <div class="tiles">
+            <article class="tile">
+                <span class="num">01</span>
+                <h3>走廊里的光</h3>
+                <p>
+                    上午十点，光会贴着走廊的墙走一段。教室门开着的时候，
+                    能看见黑板上的字被照亮一半——那是上课最好的时候。
+                </p>
+                <span class="meta">CORRIDOR LIGHT / 10:00</span>
+            </article>
+
+            <article class="tile">
+                <span class="num">02</span>
+                <h3>图书馆的第五排</h3>
+                <p>
+                    靠窗第五排的位置最抢手：有光、有插座、抬头能看见树。
+                    期末周的时候，这里会一直亮到闭馆音乐响起。
+                </p>
+                <span class="meta">LIBRARY SEAT / ALL DAY</span>
+            </article>
+
+            <article class="tile">
+                <span class="num">03</span>
+                <h3>傍晚的跑道</h3>
+                <p>
+                    体育场亮灯之后，跑道会变成一条发光的环。有人在跑配速，
+                    有人只是慢慢地走，把一天的事想一遍。
+                </p>
+                <span class="meta">TRACK / 19:00</span>
+            </article>
+
+            <article class="tile">
+                <span class="num">04</span>
+                <h3>散场后的球场</h3>
+                <p>
+                    球滚到角落，灯还亮着几盏。有人蹲在场边系鞋带，
+                    有人隔着半个球场喊话——校园的热闹，退潮得也很有秩序。
+                </p>
+                <span class="meta">COURT / AFTER</span>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- 结语 -->
+<section class="closing">
+    <div class="container">
+        <div class="closing-panel">
+            <span class="rubric">CLOSING / 建筑之美 · 校园之福</span>
+            <h2>楼宇会旧，走进去的人会一直在</h2>
+            <p>
+                校园建筑不仅是教学活动的载体，更是校园文化的物质体现。
+                福州外语外贸学院将现代设计理念与育人思想相结合，
+                为广大师生打造舒适、开放的学习生活空间。
+            </p>
+            <p>
+                在这里，每一栋楼宇都见证青年学子的逐梦旅程：
+                有人在教学楼里第一次讲完整段英语，有人在图书馆里读完了人生第一本厚书，
+                有人在操场上把八百米跑成了习惯。建筑不说话，但它全都记得。
+            </p>
+            <a href="campus.html" class="back">← 返回校园福韵</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>福韵校园·福满榕城 © 2026 | 福州外语外贸学院 · 福文化主题网站</p>
+            <p>V2.1 · 数字文化刊物 / 福州福文化数字展陈</p>
+    </div>
+</footer>
+
+<script>
+(function () {
+    var DATA = {
+        teach: {
+            chip: "TEACHING · 教学楼",
+            title: "教学楼",
+            img: "image/webp/滨海教学楼-1600.webp",
+            alt: "教学楼",
+            cap: "PHOTO 01 / 教学楼 · 滨海校区",
+            d1: "宽敞明亮的教学场所，是同学们汲取知识、课堂研讨的主要阵地。铃声落下，走廊会在几十秒里被脚步填满，又在下一节课的铃声中重新安静。",
+            d2: "楼里的每一间教室都有自己的时刻表：上午是专业课的板书声，下午是小组讨论的低声争辩，傍晚偶尔留下几个还在改作业的人。",
+            spec: [
+                ["关键词", "课堂 · 研讨 · 自习"],
+                ["日常", "清晨到夜晚，灯火接力"],
+                ["福气", "求知得解，是校园的第一种福"]
+            ]
+        },
+        lib: {
+            chip: "LIBRARY · 图书馆",
+            title: "图书馆",
+            img: "image/webp/图书馆内部-1600.webp",
+            alt: "图书馆",
+            cap: "PHOTO 02 / 图书馆 · 阅览空间",
+            d1: "藏书丰富，环境安静舒适，是校园求知研学的精神地标。清晨六点半，第一盏阅览灯亮起，占座的水杯排成一列。",
+            d2: "这里的安静是有层次的：翻书声、笔尖声、偶尔的咳嗽声。抬头能看见一排排书架，像是把整座校园的知识都立了起来。",
+            spec: [
+                ["关键词", "阅读 · 检索 · 静思"],
+                ["日常", "开馆到闭馆，灯光常亮"],
+                ["福气", "心能静下来，是难得的福"]
+            ]
+        },
+        sport: {
+            chip: "SPORTS · 文体场馆",
+            title: "文体场馆",
+            img: "image/webp/体育馆内部-1600.webp",
+            alt: "体育馆",
+            cap: "PHOTO 03 / 文体场馆 · 室内场地",
+            d1: "体育馆、运动场，丰富同学们课余体育锻炼，强健体魄。羽毛球落地的脆响、球鞋摩擦地面的声音，是这里最日常的背景音。",
+            d2: "晚自习之后，场馆会迎来一天的第二次热闹。有人在练投篮，有人只是慢跑，把白天没消化完的情绪跑掉。",
+            spec: [
+                ["关键词", "运动 · 比赛 · 释放"],
+                ["日常", "课后与晚间，人声最密"],
+                ["福气", "身体康健，是最实在的福"]
+            ]
+        }
+    };
+
+    function srcsetFor(src){
+        var base = src.replace(/-1600\.webp$/, '');
+        return base + '-640.webp 640w, ' + base + '-1024.webp 1024w, ' + src + ' 1600w';
+    }
+
+    var tabs = document.querySelectorAll('.tab');
+    var nodes = document.querySelectorAll('.node');
+    var stageMedia = document.getElementById('stageMedia');
+    var img = document.getElementById('stageImg');
+    var cap = document.getElementById('stageCap');
+    var chip = document.getElementById('stageChip');
+    var title = document.getElementById('stageTitle');
+    var d1 = document.getElementById('stageDesc1');
+    var d2 = document.getElementById('stageDesc2');
+    var spec = document.getElementById('stageSpec');
+
+    function render(key) {
+        var d = DATA[key];
+        if (!d) return;
+
+        tabs.forEach(function (t) {
+            t.classList.toggle('active', t.dataset.key === key);
+        });
+        nodes.forEach(function (n) {
+            n.classList.toggle('active', n.dataset.key === key);
+        });
+
+        stageMedia.classList.add('is-fading');
+
+        setTimeout(function () {
+            img.src = d.img;
+            img.srcset = srcsetFor(d.img);
+            img.sizes = '(max-width: 1000px) 92vw, 420px';
+            img.alt = d.alt;
+            cap.textContent = d.cap;
+            chip.textContent = d.chip;
+            title.textContent = d.title;
+            d1.textContent = d.d1;
+            d2.textContent = d.d2;
+
+            spec.innerHTML = '';
+            d.spec.forEach(function (row) {
+                var li = document.createElement('li');
+                var b = document.createElement('b');
+                var s = document.createElement('span');
+                b.textContent = row[0];
+                s.textContent = row[1];
+                li.appendChild(b);
+                li.appendChild(s);
+                spec.appendChild(li);
+            });
+
+            stageMedia.classList.remove('is-fading');
+        }, 220);
+    }
+
+    tabs.forEach(function (t) {
+        t.addEventListener('click', function () {
+            render(t.dataset.key);
+        });
+    });
+
+    nodes.forEach(function (n) {
+        n.addEventListener('click', function () {
+            render(n.dataset.key);
+        });
+    });
+})();
+</script>
+
+<script src="./js/site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+server:
+  port: ${FZWYWM_PORT:8080}
+  address: ${FZWYWM_ADDRESS:0.0.0.0}
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true
+
+spring:
+  application:
+    name: fzwywm-server
+  web:
+    resources:
+      static-locations: classpath:/static/,file:../fzwywm/
+  datasource:
+    url: ${FZWYWM_DB_URL:jdbc:mysql://127.0.0.1:3306/fzwywm?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true}
+    username: ${FZWYWM_DB_USER:fzwywm}
+    password: ${FZWYWM_DB_PASSWORD:Fzwywm@2026}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 6
+      connection-timeout: 5000
+  sql:
+    init:
+      mode: always
+      encoding: UTF-8
+      schema-locations: classpath:schema.sql
+      data-locations: classpath:data.sql
+  jackson:
+    time-zone: Asia/Shanghai
+    date-format: yyyy-MM-dd HH:mm:ss
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+
+logging:
+  level:
+    root: info
+    com.fzwywm: info

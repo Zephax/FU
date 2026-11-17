@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>福韵校园·福满榕城 | 首页</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/home.css">
+</head>
+<body class="home">
+
+<header class="hud-header">
+    <div class="container nav-wrap">
+        <a class="logo" href="index.html">
+            
+            <svg class="logo-mark" viewBox="0 0 240 120" role="img" aria-label="福韵校园·福满榕城">
+                <defs>
+                    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#3474A6"/>
+                        <stop offset="100%" stop-color="#1F4E79"/>
+                    </linearGradient>
+                    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="#FFE27A"/>
+                        <stop offset="100%" stop-color="#FFD55A"/>
+                    </linearGradient>
+                    <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#3474A6"/>
+                        <stop offset="50%" stop-color="#FFD55A"/>
+                        <stop offset="100%" stop-color="#1F4E79"/>
+                    </linearGradient>
+                </defs>
+
+                <!-- 左侧：校园钟楼 -->
+                <g>
+                    <rect x="18" y="34" width="44" height="52" rx="6" fill="url(#blueGrad)"/>
+                    <rect x="26" y="24" width="28" height="14" rx="3" fill="#1F4E79"/>
+                    <rect x="36" y="14" width="8" height="12" rx="2" fill="#3474A6"/>
+                    <circle cx="40" cy="20" r="2.4" fill="url(#goldGrad)"/>
+                    <rect x="30" y="44" width="8" height="10" rx="2" fill="#FFD55A"/>
+                    <rect x="42" y="44" width="8" height="10" rx="2" fill="#FFD55A"/>
+                    <rect x="30" y="60" width="8" height="10" rx="2" fill="#FFD55A"/>
+                    <rect x="42" y="60" width="8" height="10" rx="2" fill="#FFD55A"/>
+                    <rect x="30" y="76" width="8" height="10" rx="2" fill="#FFD55A"/>
+                    <rect x="42" y="76" width="8" height="10" rx="2" fill="#FFD55A"/>
+                    <path d="M10 86 L68 86 L68 92 L10 92 Z" fill="#1F4E79"/>
+                    <path d="M14 82 L64 82 L64 88 L14 88 Z" fill="#3474A6"/>
+                    <path d="M18 78 L60 78 L60 84 L18 84 Z" fill="#FFD55A" opacity="0.85"/>
+                </g>
+
+                <!-- 中间：福字印章 -->
+                <g>
+                    <circle cx="120" cy="60" r="34" fill="url(#goldGrad)"/>
+                    <circle cx="120" cy="60" r="28" fill="#FFFFFF"/>
+                    <path d="M120 36 L142 48 L142 72 L120 84 L98 72 L98 48 Z" fill="#1F4E79"/>
+                    <text x="120" y="72" text-anchor="middle" font-size="34"
+                          font-family="'STKaiti','KaiTi','Songti SC','SimSun',serif"
+                          font-weight="700" fill="#FFD55A">福</text>
+                    <circle cx="120" cy="60" r="28" fill="none" stroke="#1F4E79" stroke-width="1.2" opacity="0.4"/>
+                </g>
+
+                <!-- 榕树树冠 -->
+                <g fill="#1F4E79" opacity="0.75">
+                    <circle cx="108" cy="46" r="5"/>
+                    <circle cx="132" cy="46" r="5"/>
+                    <circle cx="120" cy="40" r="6"/>
+                    <circle cx="114" cy="52" r="3.4"/>
+                    <circle cx="126" cy="52" r="3.4"/>
+                </g>
+
+                <!-- 右侧：三坊七巷马鞍墙 -->
+                <g>
+                    <path d="M174 86 L174 50 L184 50 L184 40 L194 40 L194 50 L204 50 L204 34 L214 34 L214 50 L224 50 L224 86 Z" fill="url(#blueGrad)"/>
+                    <path d="M178 56 L182 56 L182 82 L178 82 Z" fill="#FFD55A"/>
+                    <path d="M198 56 L202 56 L202 82 L198 82 Z" fill="#FFD55A"/>
+                    <path d="M210 56 L214 56 L214 82 L210 82 Z" fill="#FFD55A"/>
+                    <rect x="186" y="58" width="6" height="10" rx="2" fill="#FFD55A"/>
+                    <rect x="206" y="58" width="6" height="10" rx="2" fill="#FFD55A"/>
+                    <path d="M170 86 L228 86 L228 92 L170 92 Z" fill="#1F4E79"/>
+                </g>
+
+                <!-- 底部：闽江波浪 -->
+                <g>
+                    <path d="M6 96 Q20 88 34 96 T62 96 T90 96 T118 96 T146 96 T174 96 T202 96 T234 96 L234 110 L6 110 Z" fill="#3474A6" opacity="0.18"/>
+                    <path d="M4 100 Q18 92 32 100 T60 100 T88 100 T116 100 T144 100 T172 100 T200 100 T236 100" fill="none" stroke="url(#waveGrad)" stroke-width="2.6"/>
+                    <path d="M8 106 Q22 98 36 106 T64 106 T92 106 T120 106 T148 106 T176 106 T204 106 T232 106" fill="none" stroke="#FFD55A" stroke-width="2"/>
+                </g>
+
+                <!-- 顶部祥云 -->
+                <g fill="#FFD55A" opacity="0.85">
+                    <path d="M88 24 L94 24 L97 20 L103 20 L106 24 L112 24 L112 28 L88 28 Z"/>
+                    <path d="M130 24 L136 24 L139 20 L145 20 L148 24 L154 24 L154 28 L130 28 Z"/>
+                </g>
+            </svg>
+        </a>
+
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html" class="active"><i>01</i>首页</a></li>
+                <li><a href="campus.html"><i>02</i>校园福韵</a></li>
+                <li><a href="fuzhou.html"><i>03</i>福满榕城</a></li>
+                <li><a href="experience.html"><i>04</i>福文化体验</a></li>
+                <li><a href="about.html"><i>05</i>关于我们</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- 首屏【升级HUD驾驶舱版本】 -->
+<section class="hero">
+    <div class="container hero-inner">
+        <div class="hero-copy">
+            <div class="hud-line">
+                <span class="dot"></span>SYS://FU-CULTURE · 01
+            </div>
+
+            <h1 class="hero-title">
+                <span>福韵校园</span>
+                <span class="accent">福满榕城</span>
+            </h1>
+
+            <p class="hero-desc">以福州外语外贸学院为起点，探寻有福之州的人文底蕴、青春气息与城市福气。</p>
+
+            <div class="hero-actions">
+                <a href="campus.html" class="btn-pixel">开启福文化之旅</a>
+                <a href="experience.html" class="btn-ghost">福气抽签</a>
+            </div>
+
+            <div class="stats">
+                <div class="stat"><b>05</b><span>主题栏目</span></div>
+                <div class="stat"><b>02</b><span>文化场域</span></div>
+                <div class="stat"><b>∞</b><span>祝福传递</span></div>
+            </div>
+        </div>
+
+        <!-- 新版：多层环形HUD福控制台 SVG -->
+        <div class="hero-hud-ring">
+            <svg viewBox="0 0 420 420" class="fu-hud-svg">
+                <!-- 外圈长刻度环 -->
+                <circle cx="210" cy="210" r="190" fill="none" stroke="#284866" stroke-width="1" stroke-dasharray="4 10" class="ring-scale"/>
+                <!-- 黄色流动光轨环（扫描流光） -->
+                <circle cx="210" cy="210" r="160" fill="none" stroke="#ffc838" stroke-width="2" stroke-dasharray="20 100" class="ring-light"/>
+                <!-- 中层细装饰环 -->
+                <circle cx="210" cy="210" r="130" fill="none" stroke="#325878" stroke-width="1" stroke-dasharray="2 6"/>
+                <!-- 内圈底板 -->
+                <circle cx="210" cy="210" r="90" fill="rgba(20,40,60,0.7)" stroke="#ffc838" stroke-width="1.5"/>
+            </svg>
+            <div class="fu-center-text">福</div>
+        </div>
+    </div>
+</section>
+
+<!-- 走进福文化 -->
+<section class="zone">
+    <div class="container">
+        <div class="zone-head">
+            <h2 class="zone-title">走进福文化</h2>
+            <p class="zone-sub">校园书香与闽都文脉交融，共同绘就蓝白黄底色上的福韵画卷</p>
+        </div>
+
+        <div class="tech-cards">
+            <article class="tech-card">
+                <span class="idx">01</span>
+                <div class="thumb">
+                    <img src="image/图书馆.jpg" alt="校园福韵">
+                    <span class="dither"></span>
+                </div>
+                <div class="card-body">
+                    <span class="tag">CAMPUS · 校园文化</span>
+                    <h3>校园福韵</h3>
+                    <p>走进福州外语外贸学院，感受校训精神、校园风光与青春活动，让校园成为孕育福气的福地。</p>
+                    <a href="campus.html" class="btn-pixel sm">前往查看 →</a>
+                </div>
+            </article>
+
+            <article class="tech-card">
+                <span class="idx">02</span>
+                <div class="thumb">
+                    <img src="image/三坊七巷.jpg" alt="福满榕城">
+                    <span class="dither"></span>
+                </div>
+                <div class="card-body">
+                    <span class="tag">FUZHOU · 福州文化</span>
+                    <h3>福满榕城</h3>
+                    <p>三坊七巷的古厝、榕树之下的烟火、闽江边的夜色，共同组成有福之州的文化记忆。</p>
+                    <a href="fuzhou.html" class="btn-pixel sm">前往查看 →</a>
+                </div>
+            </article>
+
+            <article class="tech-card">
+                <span class="idx">03</span>
+                <div class="thumb">
+                    <img src="image/中国结.jpg" alt="福文化体验">
+                    <span class="dither"></span>
+                </div>
+                <div class="card-body">
+                    <span class="tag">INTERACT · 互动体验</span>
+                    <h3>福文化体验</h3>
+                    <p>福气抽签、在线祝福，把校园祝福与福州福气装进一张小小的祝福卡中。</p>
+                    <a href="experience.html" class="btn-pixel sm">去体验 →</a>
+                </div>
+            </article>
+        </div>
+    </div>
+    <div class="scroll-hint">
+    <span>向下滚动</span>
+    <div class="scroll-arrow">
+        <i></i>
+        <i></i>
+        <i></i>
+    </div>
+</div>
+</section>
+
+<!-- 校园与榕城 -->
+<section class="zone zone-alt">
+    <div class="container">
+        <div class="zone-head">
+            <h2 class="zone-title">校园与榕城</h2>
+            <p class="zone-sub">一条福文化的纽带，连接校园青春与闽都人文</p>
+        </div>
+
+        <div class="wide-wrap">
+            <article class="wide-card">
+                <div class="wide-media">
+                    <img src="image/福外大门.jpg" alt="福州外语外贸学院">
+                </div>
+                <div class="wide-body">
+                    <div class="idx-lg">01</div>
+                    <h3><a href="https://www.fzfu.com/" target="_blank" rel="noopener">福州外语外贸学院</a></h3>
+                    <p>以外语与商贸特色育人，在开放、包容、创新的校园氛围中，培养具有家国情怀与国际视野的青年学子。</p>
+                    <span class="wide-meta">FZFU · 融会中外 经世致用</span>
+                </div>
+            </article>
+
+            <article class="wide-card alt">
+                <div class="wide-media">
+                    <img src="image/爱心树.jpg" alt="有福之州">
+                </div>
+                <div class="wide-body">
+                    <div class="idx-lg">02</div>
+                    <h3><a href="https://cntmedia.cn/cnt/depth/1579728331576971264.html" target="_blank" rel="noopener">有福之州</a></h3>
+                    <p>福州，一座被福气浸润的城市。三坊七巷、榕树、闽江、寿山石雕与闽味美食，共同书写城市的文化底色。</p>
+                    <span class="wide-meta">FUZHOU · 有福之州 千年闽都</span>
+                </div>
+            </article>
+        </div>
+
+        <div class="rail">
+            <span>三坊七巷</span><i></i>
+            <span>榕树</span><i></i>
+            <span>闽江</span><i></i>
+            <span>寿山石雕</span><i></i>
+            <span>拗九节</span>
+            <a href="fuzhou.html">展开福州文化 →</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>福韵校园·福满榕城 © 2026 | 福州外语外贸学院 · 福文化主题网站</p>
+    </div>
+</footer>
+<style>
+/* ========== Hero 深蓝HUD驾驶舱 新版样式（对齐第二套比例规范，类名完全保留不变） ========== */
+.hero {
+  position: relative;
+  padding:86px 0 78px;
+  overflow:hidden;
+  color:#fff;
+  background:
+      radial-gradient(900px 520px at 15% 8%,rgba(52,116,166,.55),transparent 70%),
+      radial-gradient(700px 420px at 85% 0%,rgba(255,213,90,.16),transparent 65%),
+      linear-gradient(165deg,#081B2E 0%,#0E3352 48%,#0A2136 100%);
+}
+/* 透视网格地面（向远处汇聚的HUD网格，对齐第二套透视、透明度） */
+.hero::before {
+  content: "";
+  position:absolute;
+  inset:0;
+  background-image:
+      linear-gradient(rgba(127,231,255,.18) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(127,231,255,.18) 1px,transparent 1px);
+  background-size:56px 56px;
+  transform:perspective(600px) rotateX(54deg) scale(1.7);
+  transform-origin:bottom center;
+  opacity:.32;
+  -webkit-mask-image:linear-gradient(to top,#000,transparent 72%);
+  mask-image:linear-gradient(to top,#000,transparent 72%);
+  pointer-events: none;
+  z-index: 1;
+}
+/* 淡淡的福纹暗纹背景，可选，不想要直接删掉这一段 */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("");
+  opacity: 0.06;
+  background-size: 300px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-inner {
+  position:relative;
+  z-index:1;
+  display:grid;
+  grid-template-columns:minmax(0,1.35fr) minmax(0,.85fr);
+  gap:56px;
+  align-items:center;
+}
+
+.hero-copy {
+  flex: unset;
+  max-width: 560px;
+}
+.hud-line {
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:22px;
+  padding:6px 12px;
+  font-family:"Courier New",monospace;
+  font-size:12px;
+  letter-spacing:.2em;
+  color:#7FE7FF;
+  border:1px solid rgba(127,231,255,.35);
+  background:rgba(127,231,255,.06);
+}
+.hud-line .dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: #FFD55A;
+  box-shadow:0 0 10px #FFD55A;
+  border-radius: 50%;
+  margin-right: 8px;
+  animation: blink 1.6s steps(2) infinite alternate;
+}
+@keyframes blink {
+    from{opacity:.3}
+    to{opacity:1}
+}
+
+.hero-title {
+  margin:0 0 18px;
+  font-size:clamp(38px,5.4vw,66px);
+  line-height:1.08;
+  font-weight:900;
+  letter-spacing:.06em;
+}
+.hero-title .accent {
+  color: #FFD55A;
+  text-shadow:4px 0 0 rgba(127,231,255,.55),8px 8px 0 rgba(10,33,54,.6);
+}
+.hero-desc {
+  max-width:560px;
+  margin:0 0 30px;
+  padding-left:16px;
+  border-left:3px solid #FFD55A;
+  font-size:17px;
+  line-height:1.9;
+  color:#CFE8F6;
+}
+.hero-actions {
+  display:flex;
+  flex-wrap:wrap;
+  gap:16px;
+  margin-bottom:38px;
+}
+.btn-pixel {
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:14px 26px;
+  background:#FFD55A;
+  color:#08202F;
+  font-size:15px;
+  font-weight:800;
+  letter-spacing:.06em;
+  transition: 0.25s;
+  clip-path:polygon(10px 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%,0 10px);
+}
+.btn-pixel::after{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  bottom:0;
+  width:4px;
+  background:#0E3352;
+  opacity:.5;
+}
+.btn-pixel:hover {
+  background:#FFE382;
+  transform:translate(-2px,-2px);
+  filter:drop-shadow(6px 6px 0 rgba(10,33,54,.85));
+  box-shadow: unset;
+}
+.btn-ghost {
+  display:inline-flex;
+  align-items:center;
+  padding:14px 24px;
+  font-size:15px;
+  font-weight:700;
+  letter-spacing:.06em;
+  color:#CFE8F6;
+  border:1px solid rgba(127,231,255,.4);
+  background:rgba(127,231,255,.06);
+  transition:0.25s;
+}
+.btn-ghost:hover {
+  border-color:#FFD55A;
+  color:#FFD55A;
+  background:rgba(255,213,90,.08);
+}
+.stats {
+  display:flex;
+  flex-wrap:wrap;
+  gap:34px;
+}
+.stat{
+  min-width:100px;
+  padding-top:10px;
+  border-top:2px solid rgba(127,231,255,.3);
+}
+.stat b {
+  display:block;
+  font-family:"Courier New",monospace;
+  font-size:26px;
+  letter-spacing:.08em;
+  color:#FFD55A;
+  font-weight:bold;
+}
+.stat span {
+  color:#9FC4DC;
+  font-size:12px;
+  letter-spacing:.18em;
+}
+
+/* ========== 右侧环形HUD控制台，保留你原来svg福环结构，尺寸对齐badge ========== */
+.hero-hud-ring {
+  position:relative;
+  width:min(320px,100%);
+  aspect-ratio:1/1;
+  flex-shrink:0;
+  display:grid;
+  place-items:center;
+  margin-left: 50px;
+  border:1px solid rgba(127,231,255,.35);
+  background:radial-gradient(circle,rgba(52,116,166,.22),rgba(10,33,54,0) 70%);
+  clip-path:polygon(0 26px,26px 0,calc(100% - 26px) 0,100% 26px,100% calc(100% - 26px),calc(100% - 26px) 100%,26px 100%,0 calc(100% - 26px));
+}
+.fu-hud-svg {
+  width:100%;
+  height:100%;
+  filter: drop-shadow(0 0 10px rgba(255,213,90,.25));
+}
+/* 外圈刻度缓慢自转 */
+.ring-scale {
+  animation: rotateRing 24s linear infinite;
+  transform-origin: 210px 210px;
+}
+/* 黄色流光扫描效果 */
+.ring-light {
+  animation: scanLight 8s linear infinite;
+  filter: drop-shadow(0 0 6px #FFD55A);
+  transform-origin: 210px 210px;
+}
+.fu-center-text {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  font-size:clamp(72px,10vw,112px);
+  line-height:1;
+  color:#FFD55A;
+  font-weight:bold;
+  font-family: "STKaiti",KaiTi,serif;
+}
+
+@keyframes rotateRing {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes scanLight {
+  0% { stroke-dashoffset:0; }
+  100% { stroke-dashoffset: -240; }
+}
+
+/* 移动端适配，完全复用第二套响应式规则 */
+@media(max-width: 900px){
+  .hero-inner{
+    grid-template-columns:1fr;
+    gap:36px;
+  }
+  .hero-hud-ring{
+    width:min(320px,100%);
+    margin-top:30px;
+  }
+  .fu-center-text{
+    font-size:clamp(72px,10vw,112px);
+  }
+  .stats{
+    justify-content:flex-start;
+  }
+}
+@media (max-width:600px){
+  .hero{
+    padding:64px 0 56px;
+  }
+  .hero-desc{
+    font-size:15px;
+  }
+  .stats{
+    gap:18px;
+  }
+}
+.scroll-hint {
+  position: absolute;
+  left: 50%;
+  top: -10%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: #7FE7FF;
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  letter-spacing: 3px;
+  animation: hintFade 3s ease-in-out infinite;
+}
+
+.scroll-arrow {
+  position: relative;
+  width: 26px;
+  height: 40px;
+}
+
+.scroll-arrow i {
+  position: absolute;
+  left: 50%;
+  width: 14px;
+  height: 2px;
+  background: #FFD55A;
+  box-shadow: 0 0 8px #FFD55A;
+  animation: scrollLine 2s infinite;
+}
+
+.scroll-arrow i:nth-child(1) {
+  top: 4px;
+  transform: translate(-50%, 0) rotate(45deg);
+  animation-delay: 0s;
+}
+
+.scroll-arrow i:nth-child(2) {
+  top: 14px;
+  transform: translate(-50%, 0) rotate(45deg);
+  animation-delay: 0.2s;
+}
+
+.scroll-arrow i:nth-child(3) {
+  top: 24px;
+  transform: translate(-50%, 0) rotate(45deg);
+  animation-delay: 0.4s;
+}
+
+@keyframes scrollLine {
+  0% {
+    opacity: 0;
+    transform: translate(-120%, 0) rotate(45deg);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(20%, 0) rotate(45deg);
+  }
+}
+
+@keyframes hintFade {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+</style>
+<script>
+document.querySelector('.scroll-hint').addEventListener('click', function () {
+  window.scrollBy({
+    top: window.innerHeight * 0.85,
+    behavior: 'smooth'
+  });
+});
+</script>
+</body>
+</html>

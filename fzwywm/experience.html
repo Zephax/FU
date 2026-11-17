@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#081A2A">
+    <meta name="description" content="福气抽签、点亮福灯、翻牌问俗与在线祝福墙，动手体验属于福州的福文化。">
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="福韵校园·福满榕城">
+    <meta property="og:description" content="福州外语外贸学院福文化主题网站：数字文化刊物与轻量 HUD 信息界面。">
+    <meta property="og:image" content="./assets/og-cover.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>福文化体验 | 福韵校园·福满榕城</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/hud.css">
+    <link rel="stylesheet" href="./css/experience.css">
+    <link rel="stylesheet" href="./css/theme-v2.css">
+</head>
+<body class="exp">
+
+<header class="hud-header">
+    <div class="container nav-wrap">
+        <a class="logo logo-emblem-lockup" href="index.html" aria-label="福韵校园·福满榕城首页" title="福韵校园·福满榕城">
+            <img class="logo-emblem" src="./assets/logo-emblem.svg" alt="" width="240" height="84">
+            <span class="logo-word"><b>福韵校园</b><em>福满榕城</em></span>
+        </a>
+
+        <nav aria-label="主导航">
+            <ul class="nav-list">
+                <li><a href="index.html"><i>01</i>首页</a></li>
+                <li><a href="campus.html"><i>02</i>校园福韵</a></li>
+                <li><a href="fuzhou.html"><i>03</i>福满榕城</a></li>
+                <li><a href="experience.html" class="active"><i>04</i>福文化体验</a></li>
+                <li><a href="about.html"><i>05</i>关于我们</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="container hero-inner">
+        <div>
+            <div class="hud-line">
+                <span class="dot"></span>SYS://FU-EXPERIENCE · 04
+                <span class="hud-coords" aria-hidden="true">MODE · INTERACT / SIG ▮▮▮▯</span>
+            </div>
+            <h1>福文化体验</h1>
+            <p class="lead">
+                福不是匾上的一个字，而是可以动手玩的事。
+                抽一支签，看今天的好运往哪走；点一盏灯，给心里挂个念想；
+                翻一张牌，听听福州的旧俗；写一句祝福，把福气送给别人，也留给自己。
+            </p>
+            <div class="hero-tags">
+                <span>LOTTERY · 抽签</span>
+                <span>LANTERN · 点灯</span>
+                <span>FLIP · 翻牌</span>
+                <span>WISH · 留言</span>
+            </div>
+        </div>
+
+        <div class="hero-fu">
+            <div class="big">福</div>
+            <div class="cap">EVERY DAY, A LITTLE FORTUNE</div>
+        </div>
+    </div>
+</section>
+
+<!-- 工作台 -->
+<section class="workbench">
+    <div class="container bench-grid">
+
+        <!-- 左侧仪表盘 -->
+        <aside class="side">
+            <div class="meter-card">
+                <span class="k">FORTUNE METER / 福气值</span>
+                <div class="meter-val">
+                    <b id="meterNum">0</b>
+                    <span>/ 100</span>
+                </div>
+                <div class="meter-bar"><i id="meterFill"></i></div>
+                <p class="meter-tip">
+                    每完成一次互动，福气值都会增加一点，每天零点重置。抽签 +8、点灯 +4、翻牌 +6、留言 +10。
+                    攒满 100，就是今天的小圆满。
+                </p>
+            </div>
+
+            <div class="side-list">
+                <span class="t">EXPERIENCE MENU</span>
+                <a href="#lot"><em>01</em>福气抽签</a>
+                <a href="#lamp"><em>02</em>点亮福灯</a>
+                <a href="#cards"><em>03</em>翻牌问俗</a>
+                <a href="#wall"><em>04</em>在线祝福墙</a>
+            </div>
+        </aside>
+
+        <!-- 右侧模块 -->
+        <div class="main-col">
+
+            <!-- 抽签 -->
+            <section class="module" id="lot">
+                <div class="m-head">
+                    <div>
+                        <span class="rubric">01 / LOTTERY</span>
+                        <h2>今日福气抽签</h2>
+                    </div>
+                    <span class="hint">每人每天一次 · 福气 +8</span>
+                </div>
+
+                <p class="m-desc">
+                    抽签是老福州人过日子的仪式感：庙里摇签筒，落出一支，签上有诗句，
+                    也有对日子的叮嘱。这里把签简化成了八句话——不必当真，但如果刚好说到你心里，
+                    就当是这座城递过来的一句问候。
+                </p>
+
+                <div class="lot-box">
+                    <div class="tube" id="tube">
+                        <div class="sticks"><i></i><i></i><i></i></div>
+                        <div class="cup"></div>
+                    </div>
+
+                    <div class="lot-right">
+                        <div class="result" id="lotteryResult">点击下方按钮，抽取你的今日福气。</div>
+                        <button class="btn-pixel" id="drawBtn">摇一支福签 →</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 福灯 -->
+            <section class="module" id="lamp">
+                <div class="m-head">
+                    <div>
+                        <span class="rubric">02 / LANTERN</span>
+                        <h2>点亮五盏福灯</h2>
+                    </div>
+                    <span class="hint">每盏灯每天一次 · 福气 +4</span>
+                </div>
+
+                <p class="m-desc">
+                    福州有元宵看灯、中秋悬灯的旧俗，灯火既是热闹，也是“照亮前路”的祝愿。
+                    五盏灯各有名字：安康、顺遂、勤学、良友、心想。全部点亮之后，
+                    这页会替你记下这一晚的心意。
+                </p>
+
+                <div class="lantern-row" id="lanternRow">
+                    <button class="lantern" type="button" aria-label="点亮安康灯" aria-pressed="false">
+                        <span class="cap"></span>
+                        <span class="body"></span>
+                        <span class="base"></span>
+                        <span class="tail"></span>
+                        <span class="label">安康</span>
+                    </button>
+
+                    <button class="lantern" type="button" aria-label="点亮顺遂灯" aria-pressed="false">
+                        <span class="cap"></span>
+                        <span class="body"></span>
+                        <span class="base"></span>
+                        <span class="tail"></span>
+                        <span class="label">顺遂</span>
+                    </button>
+
+                    <button class="lantern" type="button" aria-label="点亮勤学灯" aria-pressed="false">
+                        <span class="cap"></span>
+                        <span class="body"></span>
+                        <span class="base"></span>
+                        <span class="tail"></span>
+                        <span class="label">勤学</span>
+                    </button>
+
+                    <button class="lantern" type="button" aria-label="点亮良友灯" aria-pressed="false">
+                        <span class="cap"></span>
+                        <span class="body"></span>
+                        <span class="base"></span>
+                        <span class="tail"></span>
+                        <span class="label">良友</span>
+                    </button>
+
+                    <button class="lantern" type="button" aria-label="点亮心想灯" aria-pressed="false">
+                        <span class="cap"></span>
+                        <span class="body"></span>
+                        <span class="base"></span>
+                        <span class="tail"></span>
+                        <span class="label">心想</span>
+                    </button>
+                </div>
+
+                <p class="lamp-status">已点亮 <b id="lampCount">0</b> / 5 盏</p>
+            </section>
+
+            <!-- 翻牌 -->
+            <section class="module" id="cards">
+                <div class="m-head">
+                    <div>
+                        <span class="rubric">03 / FLIP CARD</span>
+                        <h2>翻牌问俗：三张福州福俗卡</h2>
+                    </div>
+                    <span class="hint">每张牌每天首次翻面 · 福气 +6</span>
+                </div>
+
+                <p class="m-desc">
+                    福文化最生动的地方，是它活在具体的日子里：一碗粥、一场巡游、一桌家宴。
+                    下面三张卡片正面是名字，背面是来历。翻开来，读一段属于福州的日常。
+                </p>
+
+                <div class="flip-wrap">
+                    <div class="flip" tabindex="0">
+                        <div class="flip-inner">
+                            <div class="face front">
+                                <span class="no">CARD 01</span>
+                                <h3>拗九节</h3>
+                                <span class="tip">CLICK TO FLIP</span>
+                            </div>
+                            <div class="face back">
+                                <h4>正月廿九的孝顺粥</h4>
+                                <p>
+                                    每年正月廿九，福州人家会煮一锅“拗九粥”：糯米、红枣、花生、桂圆、荸荠一同熬煮，
+                                    再送到长辈家中。因为“九”谐音长久，这一天也被叫作“孝顺节”。
+                                    一碗甜粥，把孝心过成了具体的事。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip" tabindex="0">
+                        <div class="flip-inner">
+                            <div class="face front">
+                                <span class="no">CARD 02</span>
+                                <h3>游神</h3>
+                                <span class="tip">CLICK TO FLIP</span>
+                            </div>
+                            <div class="face back">
+                                <h4>锣鼓穿街的祈年</h4>
+                                <p>
+                                    正月里，福州许多村镇会举行游神活动：神像出巡、锣鼓开道、灯彩随行，
+                                    街巷里挤满了看热闹的人。它既是祈福风调雨顺的仪式，也是乡邻一年一度的大聚会。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip" tabindex="0">
+                        <div class="flip-inner">
+                            <div class="face front">
+                                <span class="no">CARD 03</span>
+                                <h3>太平燕</h3>
+                                <span class="tip">CLICK TO FLIP</span>
+                            </div>
+                            <div class="face back">
+                                <h4>逢喜必上的一道菜</h4>
+                                <p>
+                                    肉燕是福州宴席上的常客，因“燕”与“宴”同音，又被称作“太平燕”。
+                                    逢年过节、婚嫁升学，桌上有它，就是讨个太平安顺的彩头。
+                                    一碗清汤，几粒肉燕，是福州人对好日子的朴素表达。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 祝福墙 -->
+            <section class="module" id="wall">
+                <div class="m-head">
+                    <div>
+                        <span class="rubric">04 / BLESSING WALL</span>
+                        <h2>在线祝福墙</h2>
+                    </div>
+                    <span class="hint">每日首次留言 · 福气 +10</span>
+                </div>
+
+                <p class="m-desc">
+                    写祝福这件事，福州人做得很认真：门楣上贴福字，碗底压着“福”字红纸，
+                    拜年时说“食饱未”。语言朴素，心意却重。这里留一面墙，
+                    给校园、给福州、也给此刻读到这里的人。
+                </p>
+
+                <div class="wall-grid">
+                    <form class="bless-form" id="blessForm">
+                        <label for="username">NICKNAME / 昵称</label>
+                        <input type="text" id="username" placeholder="请输入昵称" maxlength="20">
+
+                        <label for="blessContent">BLESSING / 祝福内容</label>
+                        <textarea id="blessContent" rows="4" placeholder="写下你对校园、福州或亲友的祝福（不超过 80 字）" maxlength="80"></textarea>
+
+                        <button type="submit" class="btn-pixel">把祝福贴上去 →</button>
+                    </form>
+
+                    <div class="bless-list" id="blessList"></div>
+                </div>
+            </section>
+        </div>
+    </div>
+</section>
+
+<!-- 结语 -->
+<section class="closing">
+    <div class="container">
+        <div class="closing-panel">
+            <span class="rubric">ENDING / 体验小结</span>
+            <h2>福气不用求，动手就有</h2>
+            <p>
+                这一页没有复杂的规则，只有四件小事：摇一次签、点五盏灯、翻三张牌、写一句祝福。
+                福文化的可贵之处，正在于它从来不是高悬的概念，而是可以被反复练习的生活态度。
+            </p>
+            <p>
+                愿你在校园里认真读书，也在这座城里学会过日子；
+                愿每一次点击，都能换回一点具体的好心情。
+            </p>
+            <a href="campus.html" class="back">← 去看看校园福韵</a>
+        </div>
+    </div>
+</section>
+
+<div class="toast" id="toast"></div>
+
+<footer>
+    <div class="container">
+        <p>福韵校园·福满榕城 © 2026 | 福州外语外贸学院 · 福文化主题网站</p>
+            <p>V2.1 · 数字文化刊物 / 福州福文化数字展陈</p>
+    </div>
+</footer>
+
+<script src="./js/api.js" defer></script>
+<script src="./js/experience.js" defer></script>
+
+<script src="./js/site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,650 @@
+/* ================= 校园建筑 · 互动舞台 + 科幻像素主题 ================= */
+
+body.building{
+    --paper:#F5F8FB;
+    --ink:#0F2739;
+    --ink-2:#2B4C63;
+    --line:#C9DCE9;
+    --blue:#3474A6;
+    --blue-d:#1F4E79;
+    --gold:#FFD55A;
+    --cyan:#7FE7FF;
+    --deep:#0A2136;
+
+    background-color:var(--paper);
+    background-image:
+        linear-gradient(rgba(31,78,121,.045) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(31,78,121,.045) 1px,transparent 1px);
+    background-size:28px 28px;
+    color:var(--ink);
+}
+
+/* ---------- 顶部通栏 ---------- */
+body.building .hero{
+    position:relative;
+    overflow:hidden;
+    padding:60px 0 54px;
+    color:#fff;
+    background:
+        radial-gradient(760px 440px at 10% 6%,rgba(52,116,166,.55),transparent 70%),
+        radial-gradient(600px 360px at 90% 0%,rgba(255,213,90,.14),transparent 66%),
+        linear-gradient(165deg,#081B2E 0%,#0E3352 52%,#0A2136 100%);
+}
+
+body.building .hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image:
+        linear-gradient(rgba(127,231,255,.18) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(127,231,255,.18) 1px,transparent 1px);
+    background-size:54px 54px;
+    transform:perspective(600px) rotateX(54deg) scale(1.7);
+    transform-origin:bottom center;
+    opacity:.3;
+    -webkit-mask-image:linear-gradient(to top,#000,transparent 74%);
+    mask-image:linear-gradient(to top,#000,transparent 74%);
+}
+
+body.building .hero-inner{
+    position:relative;
+    z-index:1;
+    display:grid;
+    grid-template-columns:minmax(0,1.4fr) minmax(0,.6fr);
+    gap:42px;
+    align-items:end;
+}
+
+body.building .crumb{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    margin-bottom:20px;
+    padding:6px 12px;
+    font-family:var(--font-label);
+    font-size:11.5px;
+    letter-spacing:.16em;
+    color:var(--cyan);
+    text-decoration:none;
+    border:1px solid rgba(127,231,255,.35);
+    background:rgba(127,231,255,.06);
+    transition:.25s;
+}
+
+body.building .crumb:hover{
+    color:var(--gold);
+    border-color:var(--gold);
+    background:rgba(255,213,90,.1);
+}
+
+body.building .hero h1{
+    margin:0 0 14px;
+    font-family:'Songti SC','SimSun','STSong',serif;
+    font-size:clamp(40px,6.4vw,74px);
+    line-height:1;
+    letter-spacing:.08em;
+    color:#fff;
+    text-shadow:5px 5px 0 rgba(255,213,90,.55);
+}
+
+body.building .hero .lead{
+    max-width:560px;
+    margin:0;
+    padding-left:16px;
+    border-left:3px solid var(--gold);
+    font-size:15.5px;
+    line-height:1.95;
+    color:#CFE8F6;
+}
+
+body.building .hero-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    align-content:flex-end;
+    justify-content:flex-end;
+}
+
+body.building .hero-tags span{
+    padding:10px 14px;
+    font-family:var(--font-label);
+    font-size:11px;
+    letter-spacing:.16em;
+    color:#CFE8F6;
+    border:1px solid rgba(127,231,255,.28);
+    background:rgba(255,255,255,.04);
+}
+
+/* ---------- 互动舞台 ---------- */
+body.building .stage-sec{
+    padding:64px 0 70px;
+}
+
+body.building .sec-head{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:flex-end;
+    justify-content:space-between;
+    gap:16px;
+    margin-bottom:30px;
+    padding-bottom:14px;
+    border-bottom:2px solid var(--blue-d);
+}
+
+body.building .sec-head h2{
+    margin:0;
+    font-family:'Songti SC','SimSun',serif;
+    font-size:clamp(24px,3vw,32px);
+    letter-spacing:.06em;
+    color:var(--blue-d);
+}
+
+body.building .rubric{
+    display:inline-block;
+    margin-bottom:10px;
+    padding-bottom:6px;
+    font-family:var(--font-label);
+    font-size:11px;
+    letter-spacing:.22em;
+    color:var(--blue);
+    border-bottom:2px solid var(--gold);
+}
+
+body.building .sec-head .hint{
+    font-family:var(--font-label);
+    font-size:11px;
+    letter-spacing:.14em;
+    color:#5C7A93;
+}
+
+body.building .stage-wrap{
+    display:grid;
+    grid-template-columns:270px minmax(0,1fr);
+    gap:26px;
+    align-items:stretch;
+}
+
+body.building .tab-col{
+    display:grid;
+    gap:12px;
+    align-content:start;
+}
+
+body.building .tab{
+    position:relative;
+    display:grid;
+    grid-template-columns:auto 1fr;
+    grid-template-rows:auto auto;
+    gap:2px 12px;
+    padding:16px 18px;
+    text-align:left;
+    cursor:pointer;
+    background:#fff;
+    border:1px solid var(--line);
+    color:var(--ink-2);
+    transition:.25s;
+    font-family:inherit;
+}
+
+body.building .tab:hover{
+    border-color:var(--blue);
+    transform:translateX(3px);
+}
+
+body.building .tab.active{
+    background:linear-gradient(155deg,#103A5A,#0A2439 80%);
+    border-color:var(--gold);
+    color:#fff;
+    filter:drop-shadow(0 12px 22px rgba(10,36,57,.35));
+}
+
+body.building .tab .no{
+    grid-row:1 / span 2;
+    align-self:center;
+    font-family:var(--font-label);
+    font-size:12px;
+    color:var(--blue);
+}
+
+body.building .tab.active .no{
+    color:var(--gold);
+}
+
+body.building .tab .t{
+    font-family:'Songti SC','SimSun',serif;
+    font-size:17px;
+    letter-spacing:.06em;
+    color:var(--blue-d);
+}
+
+body.building .tab.active .t{
+    color:var(--gold);
+}
+
+body.building .tab .en{
+    font-family:var(--font-label);
+    font-size:10px;
+    letter-spacing:.18em;
+    color:#7A93A8;
+}
+
+body.building .tab.active .en{
+    color:#9FC4DC;
+}
+
+body.building .stage{
+    position:relative;
+    overflow:hidden;
+    background:#fff;
+    border:1px solid var(--line);
+    filter:drop-shadow(0 14px 30px rgba(31,78,121,.14));
+    display:grid;
+    grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);
+    min-height:420px;
+}
+
+body.building .stage-media{
+    position:relative;
+    margin:0;
+    overflow:hidden;
+    background:#0A2136;
+}
+
+body.building .stage-media img{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    opacity:1;
+    transition:opacity .3s ease,transform .5s ease;
+}
+
+body.building .stage-media.is-fading img{
+    opacity:0;
+    transform:scale(1.02);
+}
+
+body.building .stage-media::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to right,rgba(10,33,54,.42),transparent 55%),linear-gradient(to top,rgba(10,33,54,.5),transparent 45%);
+    pointer-events:none;
+}
+
+body.building .stage-media .strip{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    height:10px;
+    background-image:repeating-linear-gradient(90deg,var(--gold) 0 8px,transparent 8px 18px);
+    opacity:.85;
+    z-index:2;
+}
+
+body.building .stage-media figcaption{
+    position:absolute;
+    left:18px;
+    bottom:26px;
+    z-index:2;
+    font-family:var(--font-label);
+    font-size:10.5px;
+    letter-spacing:.14em;
+    color:#EAF4FB;
+    background:rgba(10,33,54,.55);
+    padding:4px 8px;
+}
+
+body.building .stage-info{
+    padding:34px 34px 32px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+body.building .chip{
+    display:inline-block;
+    align-self:flex-start;
+    margin-bottom:14px;
+    padding:4px 9px;
+    font-family:var(--font-label);
+    font-size:10.5px;
+    letter-spacing:.16em;
+    color:#08202F;
+    background:var(--gold);
+}
+
+body.building .stage-info h3{
+    margin:0 0 12px;
+    font-family:'Songti SC','SimSun',serif;
+    font-size:clamp(22px,2.6vw,28px);
+    letter-spacing:.05em;
+    color:var(--blue-d);
+}
+
+body.building .stage-info p{
+    margin:0 0 12px;
+    font-size:14px;
+    line-height:2;
+    color:var(--ink-2);
+    text-align:justify;
+}
+
+body.building .spec{
+    margin:16px 0 0;
+    padding:16px 0 0;
+    border-top:1px dashed rgba(31,78,121,.22);
+    list-style:none;
+}
+
+body.building .spec li{
+    display:grid;
+    grid-template-columns:70px minmax(0,1fr);
+    gap:12px;
+    padding:6px 0;
+    font-size:12.5px;
+    line-height:1.8;
+}
+
+body.building .spec li b{
+    font-weight:400;
+    color:#5C7A93;
+    letter-spacing:.1em;
+}
+
+body.building .spec li span{
+    color:var(--blue-d);
+    font-weight:700;
+}
+
+/* ---------- 校园建筑图谱 ---------- */
+body.building .map-sec{
+    padding:0 0 72px;
+}
+
+body.building .map-wrap{
+    display:grid;
+    grid-template-columns:minmax(0,1.35fr) minmax(0,.65fr);
+    gap:28px;
+    align-items:start;
+}
+
+body.building .map-panel{
+    position:relative;
+    padding:20px;
+    background:linear-gradient(160deg,#0E3352,#0A2136);
+    border:1px solid rgba(127,231,255,.3);
+    box-shadow:0 0 0 1px rgba(255,213,90,.16) inset;
+}
+
+body.building .map-panel .panel-title{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:14px;
+    font-family:var(--font-label);
+    font-size:10.5px;
+    letter-spacing:.16em;
+    color:var(--cyan);
+}
+
+body.building .map-panel svg{
+    display:block;
+    width:100%;
+    height:auto;
+}
+
+body.building .node{
+    cursor:pointer;
+}
+
+body.building .node rect{
+    fill:rgba(127,231,255,.14);
+    stroke:rgba(127,231,255,.45);
+    stroke-width:1.5;
+    transition:.25s;
+}
+
+body.building .node text{
+    fill:#CFE8F6;
+    font-family:var(--font-label);
+    font-size:9px;
+    letter-spacing:1px;
+    text-anchor:middle;
+    transition:.25s;
+}
+
+body.building .node:hover rect{
+    fill:rgba(255,213,90,.25);
+    stroke:var(--gold);
+}
+
+body.building .node.active rect{
+    fill:rgba(255,213,90,.55);
+    stroke:var(--gold);
+    stroke-width:2;
+}
+
+body.building .node.active text{
+    fill:#08202F;
+    font-weight:700;
+}
+
+body.building .map-note{
+    position:relative;
+    padding:26px 26px 28px;
+    background:#fff;
+    border:1px solid var(--line);
+    border-top:4px solid var(--gold);
+}
+
+body.building .map-note h3{
+    margin:0 0 12px;
+    font-family:'Songti SC','SimSun',serif;
+    font-size:19px;
+    letter-spacing:.05em;
+    color:var(--blue-d);
+}
+
+body.building .map-note p{
+    margin:0 0 10px;
+    font-size:13px;
+    line-height:1.95;
+    color:var(--ink-2);
+    text-align:justify;
+}
+
+body.building .map-note .key{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:14px;
+    font-family:var(--font-label);
+    font-size:10.5px;
+    letter-spacing:.14em;
+}
+
+body.building .map-note .key span{
+    padding:4px 8px;
+    color:var(--blue-d);
+    border:1px solid rgba(31,78,121,.25);
+    background:rgba(52,116,166,.06);
+}
+
+/* ---------- 建筑档案（细节磁贴） ---------- */
+body.building .tiles-sec{
+    padding:0 0 74px;
+}
+
+body.building .tiles{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:22px;
+}
+
+body.building .tile{
+    position:relative;
+    overflow:hidden;
+    padding:26px 24px 28px;
+    background:#fff;
+    border:1px solid var(--line);
+    filter:drop-shadow(0 10px 20px rgba(31,78,121,.09));
+    transition:transform .3s ease,filter .3s ease;
+}
+
+body.building .tile:hover{
+    transform:translateY(-7px);
+    filter:drop-shadow(0 20px 30px rgba(31,78,121,.2));
+}
+
+body.building .tile::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:24px;
+    bottom:24px;
+    width:2px;
+    background:var(--cinnabar);
+}
+
+body.building .tile .num{
+    display:block;
+    margin-bottom:8px;
+    font-family:'Songti SC','SimSun',serif;
+    font-size:34px;
+    line-height:1;
+    color:transparent;
+    -webkit-text-stroke:1.4px rgba(31,78,121,.42);
+}
+
+body.building .tile h3{
+    margin:0 0 10px;
+    font-family:'Songti SC','SimSun',serif;
+    font-size:18px;
+    letter-spacing:.05em;
+    color:var(--blue-d);
+}
+
+body.building .tile p{
+    margin:0;
+    font-size:13px;
+    line-height:1.95;
+    color:var(--ink-2);
+    text-align:justify;
+}
+
+body.building .tile .meta{
+    display:block;
+    margin-top:12px;
+    font-family:var(--font-label);
+    font-size:10px;
+    letter-spacing:.16em;
+    color:#7A93A8;
+}
+
+/* ---------- 结语 ---------- */
+body.building .closing{
+    padding:0 0 80px;
+}
+
+body.building .closing-panel{
+    position:relative;
+    overflow:hidden;
+    padding:40px 44px;
+    background:linear-gradient(160deg,#0E3352,#0A2136);
+    color:#DCEBF5;
+    box-shadow:0 0 0 1px rgba(255,213,90,.2) inset;
+}
+
+body.building .closing-panel .rubric{
+    color:var(--cyan);
+    border-bottom-color:var(--cyan);
+}
+
+body.building .closing-panel h2{
+    margin:0 0 16px;
+    font-family:'Songti SC','SimSun',serif;
+    font-size:clamp(22px,2.8vw,30px);
+    letter-spacing:.06em;
+    color:var(--gold);
+}
+
+body.building .closing-panel p{
+    margin:0 0 12px;
+    max-width:840px;
+    font-size:14px;
+    line-height:2;
+    color:#BFD9EA;
+    text-align:justify;
+}
+
+body.building .closing-panel .back{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    margin-top:10px;
+    padding:12px 22px;
+    font-size:13px;
+    font-weight:800;
+    letter-spacing:.05em;
+    color:#08202F;
+    background:var(--gold);
+    text-decoration:none;
+    transition:.25s;
+}
+
+body.building .closing-panel .back:hover{
+    background:#FFE382;
+    transform:translate(-2px,-2px);
+    filter:drop-shadow(5px 5px 0 rgba(0,0,0,.45));
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:1000px){
+    body.building .hero-inner{
+        grid-template-columns:1fr;
+        gap:26px;
+    }
+
+    body.building .hero-tags{
+        justify-content:flex-start;
+    }
+
+    body.building .stage-wrap{
+        grid-template-columns:1fr;
+    }
+
+    body.building .tab-col{
+        grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+        gap:10px;
+    }
+
+    body.building .stage{
+        grid-template-columns:1fr;
+    }
+
+    body.building .stage-media{
+        min-height:260px;
+    }
+
+    body.building .map-wrap{
+        grid-template-columns:1fr;
+    }
+}
+
+@media (max-width:620px){
+    body.building .stage-info{
+        padding:24px 20px 26px;
+    }
+
+    body.building .closing-panel{
+        padding:28px 22px;
+    }
+
+    body.building .spec li{
+        grid-template-columns:62px minmax(0,1fr);
+    }
+}

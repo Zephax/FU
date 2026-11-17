@@ -1,0 +1,12 @@
+@echo off
+rem Local overrides for start-lan.bat and start-demo.bat.
+rem Keep this file on your machine. Do not commit it.
+rem Uncomment and edit only the lines you need, then restart the server.
+rem Note: init-db.sql creates the default user fzwywm. If you change the
+rem DB user or password here, create that MySQL user manually as well.
+
+rem set "FZWYWM_PORT=8080"
+rem set "FZWYWM_ADDRESS=0.0.0.0"
+rem set "FZWYWM_DB_USER=fzwywm"
+rem set "FZWYWM_DB_PASSWORD=Fzwywm@2026"
+rem set "FZWYWM_DB_URL=jdbc:mysql://127.0.0.1:3306/fzwywm?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true"

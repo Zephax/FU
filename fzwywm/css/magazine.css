@@ -1,0 +1,575 @@
+/* ================= 福满榕城 · 杂志式 + 科幻像素主题 ================= */
+
+body.mag{
+    --paper:#F5F8FB;
+    --ink:#0F2739;
+    --ink-2:#2B4C63;
+    --line:#C9DCE9;
+    --blue:#3474A6;
+    --blue-d:#1F4E79;
+    --gold:#FFD55A;
+    --cyan:#7FE7FF;
+    --deep:#0A2136;
+
+    background-color:var(--paper);
+    background-image:
+        linear-gradient(rgba(31,78,121,.045) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(31,78,121,.045) 1px,transparent 1px);
+    background-size:28px 28px;
+    color:var(--ink);
+}
+
+/* ---------- 刊头 Masthead ---------- */
+body.mag .masthead{
+    position:relative;
+    overflow:hidden;
+    background:#fff;
+    border-bottom:1px solid var(--line);
+}
+
+body.mag .masthead::before{
+    content:"";
+    position:absolute;
+    right:0;
+    top:0;
+    bottom:0;
+    width:70px;
+    background-image:repeating-linear-gradient(0deg,rgba(31,78,121,.14) 0 4px,transparent 4px 12px);
+    opacity:.5;
+}
+
+body.mag .mast-inner{
+    position:relative;
+    display:grid;
+    grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);
+    gap:48px;
+    padding:60px 24px 44px;
+    align-items:end;
+}
+
+body.mag .issue{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:14px;
+    margin-bottom:18px;
+    font-family:var(--font-label);
+    font-size:11px;
+    letter-spacing:.22em;
+    color:var(--blue-d);
+}
+
+body.mag .issue .kicker{
+    padding:5px 10px;
+    color:#08202F;
+    background:var(--gold);
+    box-shadow:0 0 14px rgba(255,213,90,.55);
+    white-space:nowrap;
+}
+
+body.mag .issue .vol{
+    color:#5C7A93;
+    white-space:nowrap;
+}
+
+body.mag .mast-title h1{
+    margin:0 0 14px;
+    font-family:'Songti SC','SimSun','STSong',serif;
+    font-size:clamp(48px,8.6vw,104px);
+    line-height:.94;
+    letter-spacing:.06em;
+    color:var(--blue-d);
+    text-shadow:6px 6px 0 rgba(255,213,90,.42);
+}
+
+body.mag .mast-sub{
+    margin:0;
+    font-family:'Songti SC','SimSun',serif;
+    font-size:clamp(16px,1.6vw,20px);
+    letter-spacing:.22em;
+    color:var(--ink-2);
+}
+
+body.mag .mast-right{
+    padding-left:32px;
+    border-left:1px solid var(--line);
+}
+
+body.mag .mast-lead{
+    margin:0 0 20px;
+    font-size:14.5px;
+    line-height:2;
+    color:var(--ink-2);
+}
+
+body.mag .mast-right p::first-letter{
+    font-size:15px;
+}
+
+body.mag .mast-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    font-family:var(--font-label);
+    font-size:11px;
+    letter-spacing:.14em;
+}
+
+body.mag .mast-tags span{
+    padding:4px 9px;
+    color:var(--blue-d);
+    border:1px solid rgba(31,78,121,.25);
+    background:rgba(52,116,166,.06);
+}
+
+/* ---------- 封面故事 ---------- */
+body.mag .feature{
+    background:#fff;
+    border-bottom:1px solid var(--line);
+}
+
+body.mag .feature-grid{
+    display:grid;
+    grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);
+    gap:0;
+}
+
+body.mag .feature-media{
+    position:relative;
+    margin:0;
+    min-height:560px;
+    overflow:hidden;
+}
+
+body.mag .feature-media img{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    filter:saturate(1.05) contrast(1.04);
+}
+
+body.mag .feature-media::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to right,rgba(10,33,54,.45),transparent 60%);
+}
+
+body.mag .feature-media .strip{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    height:12px;
+    background-image:repeating-linear-gradient(90deg,var(--gold) 0 8px,transparent 8px 18px);
+    opacity:.8;
+    z-index:2;
+}
+
+body.mag .feature-media figcaption{
+    position:absolute;
+    left:22px;
+    bottom:34px;
+    right:22px;
+    z-index:2;
+    font-family:var(--font-label);
+    font-size:11px;
+    letter-spacing:.16em;
+    color:#EAF4FB;
+    opacity:.9;
+}
+
+body.mag .feature-text{
+    padding:52px 0 54px 48px;
+}
+
+body.mag .rubric{
+    display:inline-block;
+    margin-bottom:16px;
+    font-family:var(--font-label);
+    font-size:11px;
+    letter-spacing:.24em;
+    color:var(--blue);
+    border-bottom:2px solid var(--gold);
+    padding-bottom:7px;
+}
+
+body.mag .feature-text h2{
+    margin:0 0 18px;
+    font-family:'Songti SC','SimSun',serif;
+    font-size:clamp(28px,3.4vw,42px);
+    line-height:1.35;
+    letter-spacing:.04em;
+    color:var(--blue-d);
+}
+
+body.mag .standfirst{
+    margin:0 0 26px;
+    font-size:16px;
+    line-height:1.95;
+    color:var(--ink-2);
+    padding-left:16px;
+    border-left:3px solid var(--gold);
+}
+
+body.mag .columns{
+    column-count:2;
+    column-gap:34px;
+    column-rule:1px solid var(--line);
+    font-size:14px;
+    line-height:2;
+    color:var(--ink-2);
+    text-align:justify;
+}
+
+body.mag .columns p{
+    margin:0 0 14px;
+    break-inside:avoid;
+}
+
+body.mag .dropcap{
+    float:left;
+    margin:6px 10px 0 0;
+    font-family:'STKaiti','KaiTi','Songti SC',serif;
+    font-size:52px;
+    line-height:1;
+    color:var(--blue-d);
+    text-shadow:3px 3px 0 rgba(255,213,90,.55);
+}
+
+body.mag .pullquote{
+    margin:34px 0 0;
+    padding:22px 0 22px 26px;
+    border-left:4px solid var(--blue-d);
+    font-family:'Songti SC','SimSun',serif;
+    font-size:clamp(18px,2vw,24px);
+    line-height:1.8;
+    letter-spacing:.04em;
+    color:var(--blue-d);
+    background:linear-gradient(90deg,rgba(255,213,90,.16),transparent 70%);
+}
+
+body.mag .pullquote span{
+    display:block;
+    margin-top:12px;
+    font-family:var(--font-label);
+    font-size:11px;
+    letter-spacing:.2em;
+    color:#5C7A93;
+}
+
+/* ---------- 专题拼版 ---------- */
+body.mag .features{
+    padding:70px 0 76px;
+}
+
+body.mag .sec-head{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:flex-end;
+    justify-content:space-between;
+    gap:18px;
+    margin-bottom:36px;
+    padding-bottom:16px;
+    border-bottom:2px solid var(--blue-d);
+}
+
+body.mag .sec-head h2{
+    margin:0;
+    font-family:'Songti SC','SimSun',serif;
+    font-size:clamp(24px,3vw,34px);
+    letter-spacing:.06em;
+    color:var(--blue-d);
+}
+
+body.mag .bento{
+    display:grid;
+    grid-template-columns:repeat(12,1fr);
+    gap:22px;
+}
+
+body.mag .feat{
+    position:relative;
+    overflow:hidden;
+    background:#fff;
+    border:1px solid var(--line);
+    filter:drop-shadow(0 10px 22px rgba(31,78,121,.1));
+    transition:transform .3s ease,filter .3s ease;
+}
+
+body.mag .feat:hover{
+    transform:translateY(-8px);
+    filter:drop-shadow(0 22px 32px rgba(31,78,121,.22));
+}
+
+body.mag .f-a{grid-column:span 7}
+body.mag .f-b{grid-column:span 5}
+body.mag .f-c{grid-column:span 4}
+body.mag .f-d{grid-column:span 4}
+body.mag .f-e{grid-column:span 4}
+body.mag .f-f{grid-column:span 12}
+
+body.mag .feat .ph{
+    position:relative;
+    height:212px;
+    overflow:hidden;
+}
+
+body.mag .feat .ph img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:transform .6s ease;
+}
+
+body.mag .feat:hover .ph img{
+    transform:scale(1.05);
+}
+
+body.mag .feat .ph::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to top,rgba(10,33,54,.42),transparent 58%);
+}
+
+body.mag .feat .ph .strip{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    height:8px;
+    background-image:repeating-linear-gradient(90deg,var(--gold) 0 6px,transparent 6px 14px);
+    opacity:.78;
+}
+
+body.mag .f-a .ph{height:280px}
+body.mag .f-c .ph,
+body.mag .f-d .ph,
+body.mag .f-e .ph{height:172px}
+
+body.mag .feat .body{
+    padding:22px 24px 26px;
+}
+
+body.mag .feat .num{
+    display:block;
+    margin-bottom:6px;
+    font-family:'Songti SC','SimSun',serif;
+    font-size:40px;
+    line-height:1;
+    color:transparent;
+    -webkit-text-stroke:1.5px rgba(31,78,121,.45);
+}
+
+body.mag .feat .chip{
+    display:inline-block;
+    margin-bottom:12px;
+    padding:4px 9px;
+    font-family:var(--font-label);
+    font-size:10.5px;
+    letter-spacing:.16em;
+    color:#08202F;
+    background:var(--gold);
+}
+
+body.mag .feat h3{
+    margin:0 0 12px;
+    font-family:'Songti SC','SimSun',serif;
+    font-size:21px;
+    letter-spacing:.05em;
+    color:var(--blue-d);
+}
+
+body.mag .feat p{
+    margin:0 0 10px;
+    font-size:13.5px;
+    line-height:1.95;
+    color:var(--ink-2);
+    text-align:justify;
+}
+
+body.mag .feat p:last-child{
+    margin-bottom:0;
+}
+
+/* 通栏大专题 */
+body.mag .f-f{
+    display:grid;
+    grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);
+    align-items:stretch;
+}
+
+body.mag .f-f .ph{
+    height:100%;
+    min-height:300px;
+}
+
+body.mag .f-f .ph::after{
+    background:linear-gradient(to right,rgba(10,33,54,.4),transparent 62%);
+}
+
+body.mag .f-f .body{
+    padding:40px 44px 42px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+body.mag .f-f h3{
+    font-size:clamp(22px,2.6vw,28px);
+}
+
+/* ---------- 词条索引 ---------- */
+body.mag .index-sec{
+    position:relative;
+    padding:72px 0 76px;
+    color:#DCEBF5;
+    background:linear-gradient(160deg,#0A2136,#123C5E 60%,#0A2136);
+}
+
+body.mag .index-sec::before{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    height:2px;
+    background-image:repeating-linear-gradient(90deg,var(--gold) 0 8px,transparent 8px 20px);
+}
+
+body.mag .index-grid{
+    display:grid;
+    grid-template-columns:minmax(0,.78fr) minmax(0,2.22fr);
+    gap:48px;
+    align-items:start;
+}
+
+body.mag .index-head h2{
+    margin:0 0 14px;
+    font-family:'Songti SC','SimSun',serif;
+    font-size:clamp(24px,3vw,32px);
+    letter-spacing:.06em;
+    color:var(--gold);
+}
+
+body.mag .index-head p{
+    margin:0 0 18px;
+    font-size:13px;
+    line-height:1.95;
+    color:#A9C7DA;
+}
+
+body.mag .index-head .rule{
+    width:64px;
+    height:6px;
+    background-image:repeating-linear-gradient(90deg,var(--cyan) 0 6px,transparent 6px 12px);
+    opacity:.75;
+}
+
+body.mag .index-list{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:0 34px;
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+body.mag .index-list li{
+    display:grid;
+    grid-template-columns:auto 1fr auto;
+    gap:10px;
+    align-items:baseline;
+    padding:15px 2px;
+    border-bottom:1px dashed rgba(127,231,255,.28);
+}
+
+body.mag .index-list .no{
+    font-family:var(--font-label);
+    font-size:12px;
+    color:var(--gold);
+}
+
+body.mag .index-list .term{
+    font-family:'Songti SC','SimSun',serif;
+    font-size:18px;
+    letter-spacing:.04em;
+    color:#fff;
+}
+
+body.mag .index-list .pg{
+    font-family:var(--font-label);
+    font-size:11px;
+    color:#9FC4DC;
+}
+
+body.mag .index-list .desc{
+    grid-column:2 / -1;
+    margin-top:4px;
+    font-size:12px;
+    line-height:1.75;
+    color:#A9C7DA;
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:1000px){
+    body.mag .f-a,
+    body.mag .f-b{grid-column:span 12}
+
+    body.mag .f-c,
+    body.mag .f-d,
+    body.mag .f-e{grid-column:span 6}
+
+    body.mag .mast-inner,
+    body.mag .feature-grid,
+    body.mag .index-grid{
+        grid-template-columns:1fr;
+    }
+
+    body.mag .mast-right{
+        padding-left:0;
+        padding-top:24px;
+        border-left:0;
+        border-top:1px solid var(--line);
+    }
+
+    body.mag .feature-media{
+        min-height:320px;
+    }
+
+    body.mag .feature-text{
+        padding:36px 0 44px;
+    }
+}
+
+@media (max-width:620px){
+    body.mag .columns{
+        column-count:1;
+        column-rule:0;
+    }
+
+    body.mag .f-c,
+    body.mag .f-d,
+    body.mag .f-e{grid-column:span 12}
+
+    body.mag .f-f{
+        grid-template-columns:1fr;
+    }
+
+    body.mag .f-f .ph{
+        min-height:220px;
+    }
+
+    body.mag .f-f .body{
+        padding:28px;
+    }
+
+    body.mag .feat .body{
+        padding:20px;
+    }
+}

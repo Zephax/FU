@@ -1,0 +1,17 @@
+# Java build output
+fzwywm-server/target/
+fzwywm/target/
+*.class
+
+# IDE
+.idea/
+*.iml
+
+# Local machine config (copy from config.local.bat.example)
+fzwywm-server/config.local.bat
+
+# Temporary files
+__probe.txt
+*.log
+Thumbs.db
+.DS_Store

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#081A2A">
+    <meta name="description" content="校园风光拾福记：林荫步道、沿路绿化与落日余晖，左右滑动浏览福外风景。">
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="福韵校园·福满榕城">
+    <meta property="og:description" content="福州外语外贸学院福文化主题网站：数字文化刊物与轻量 HUD 信息界面。">
+    <meta property="og:image" content="./assets/og-cover.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>校园风光 | 福韵校园·福满榕城</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/hud.css">
+    <link rel="stylesheet" href="./css/building.css">
+    <link rel="stylesheet" href="./css/scenery.css">
+    <link rel="stylesheet" href="./css/theme-v2.css">
+</head>
+<body class="building">
+
+<header class="hud-header">
+    <div class="container nav-wrap">
+        <a class="logo logo-emblem-lockup" href="index.html" aria-label="福韵校园·福满榕城首页" title="福韵校园·福满榕城">
+            <img class="logo-emblem" src="./assets/logo-emblem.svg" alt="" width="240" height="84">
+            <span class="logo-word"><b>福韵校园</b><em>福满榕城</em></span>
+        </a>
+
+        <nav aria-label="主导航">
+            <ul class="nav-list">
+                <li><a href="index.html"><i>01</i>首页</a></li>
+                <li><a href="campus.html" class="active"><i>02</i>校园福韵</a></li>
+                <li><a href="fuzhou.html"><i>03</i>福满榕城</a></li>
+                <li><a href="experience.html"><i>04</i>福文化体验</a></li>
+                <li><a href="about.html"><i>05</i>关于我们</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container hero-inner">
+        <div>
+            <div class="hud-line">
+                <span class="dot"></span>SYS://FZFU-SCENERY · 02.3
+                <span class="hud-coords" aria-hidden="true">NODE · CAMPUS / SIG ▮▮▮▯</span>
+            </div>
+            <a href="campus.html" class="crumb">← 返回校园福韵</a>
+            <h1>校园风光·拾福记</h1>
+            <p class="lead">
+                不必奔赴远方，美好就在校园沿途。
+                风穿过林荫、落日吻过道路，每一帧风景，都是藏在福外里的小福气。
+            </p>
+            <button class="luck-btn" id="randomView">随机抽一处校园美景</button>
+        </div>
+        <div class="hero-tags">
+            <span>SCENERY · BLESSING</span>
+            <span>STROLL · CAMPUS</span>
+        </div>
+    </div>
+</section>
+
+<section class="container">
+    <div class="sec-head">
+        <div>
+            <span class="rubric">GALLERY / 风光画廊｜左右滑动浏览</span>
+            <h2>沿途拾景，步步纳福</h2>
+        </div>
+    </div>
+    <!-- 横向滚动画廊 -->
+    <div class="scroll-gallery" id="galleryBox">
+        <div class="gallery-item" data-id="path">
+            <img loading="lazy" decoding="async" src="image/webp/东区步行梯-1600.webp" alt="林荫步道" srcset="image/webp/东区步行梯-640.webp 640w, image/webp/东区步行梯-1024.webp 1024w, image/webp/东区步行梯-1600.webp 1600w" sizes="(max-width: 768px) 92vw, 72vw">
+            <div class="gallery-caption">
+                <span class="gallery-tag">步道 · 纳清福</span>
+                <h3>东区林荫步道</h3>
+                <p>枝叶层层叠叠织成天然凉棚，下课路上慢慢走，把匆忙的节奏放轻。</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-id="green">
+            <img loading="lazy" decoding="async" src="image/webp/宿舍公路-1600.webp" alt="绿化景观" srcset="image/webp/宿舍公路-640.webp 640w, image/webp/宿舍公路-1024.webp 1024w, image/webp/宿舍公路-1600.webp 1600w" sizes="(max-width: 768px) 92vw, 72vw">
+            <div class="gallery-caption">
+                <span class="gallery-tag">绿植 · 生旺福</span>
+                <h3>沿路绿化景观</h3>
+                <p>草木岁岁常青，花开花落自有时序，满眼生机，是蓬勃向上的福气。</p>
+            </div>
+        </div>
+        <div class="gallery-item" data-id="sunset">
+            <img loading="lazy" decoding="async" src="image/webp/落日余晖-1600.webp" alt="落日黄昏" srcset="image/webp/落日余晖-640.webp 640w, image/webp/落日余晖-1024.webp 1024w, image/webp/落日余晖-1600.webp 1600w" sizes="(max-width: 768px) 92vw, 72vw">
+            <div class="gallery-caption">
+                <span class="gallery-tag">晚霞 · 安暖福</span>
+                <h3>校园落日余晖</h3>
+                <p>黄昏是校园的温柔限定，橘色霞光铺满天际，治愈一整天的疲惫。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- 交错瀑布流卡片 -->
+<section class="container">
+    <div class="sec-head">
+        <div>
+            <span class="rubric">LITTLE STORY / 风景小故事</span>
+            <h2>藏在风光里的校园日常</h2>
+        </div>
+    </div>
+    <div class="waterfall-wrap">
+        <div class="waterfall-card">
+            <h3>台阶上的光斑</h3>
+            <p>晴天的午后，阳光穿过树叶，在步道台阶投下晃动光斑。很多同学会停下脚步，踩一踩流动的光影，简单又治愈。</p>
+        </div>
+        <div class="waterfall-card">
+            <h3>四季的小惊喜</h3>
+            <p>春天冒新芽，夏天绿荫浓密，秋天晚霞格外好看。不用出校门，就能跟着草木感受时节流转。</p>
+        </div>
+        <div class="waterfall-card">
+            <h3>青春取景框</h3>
+            <p>这里是同学们的天然取景地，结伴拍照、记录校园时光，一张张照片，留住属于福外的青春记忆。</p>
+        </div>
+        <div class="waterfall-card">
+            <h3>景中纳福的深意</h3>
+            <p>校园以景育人，生机盎然的环境，寓意平安顺遂、向阳生长。这是校园送给每一位学子独有的福气。</p>
+        </div>
+    </div>
+</section>
+
+<section class="closing">
+    <div class="container">
+        <div class="closing-panel">
+            <span class="rubric">ENDING / 拾福小结</span>
+            <h2>目之所及皆风景，行之所至皆有福</h2>
+            <p>校园风光，是无声的课堂。一草一木承载着温柔的福韵，陪伴一届又一届学子奔赴理想。</p>
+            <p>愿我们在认真读书之余，不忘抬头看云、驻足赏景，在平凡日常里，接住这些细碎又珍贵的福气。</p>
+            <a href="campus.html" class="back">← 返回校园福韵</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>福韵校园·福满榕城 © 2026 | 福州外语外贸学院 · 福文化主题网站</p>
+            <p>V2.1 · 数字文化刊物 / 福州福文化数字展陈</p>
+    </div>
+</footer>
+
+<script>
+(function(){
+    const items = Array.from(document.querySelectorAll('.gallery-item'));
+    const galleryBox = document.getElementById('galleryBox');
+    const randomBtn = document.getElementById('randomView');
+
+    function focusItem(item){
+        items.forEach(function(el){
+            el.classList.toggle('is-active', el === item);
+        });
+
+        const boxRect = galleryBox.getBoundingClientRect();
+        const itemRect = item.getBoundingClientRect();
+        const left = galleryBox.scrollLeft + itemRect.left - boxRect.left
+            - (galleryBox.clientWidth - itemRect.width) / 2;
+
+        galleryBox.scrollTo({ left: Math.max(0, left), behavior: 'smooth' });
+    }
+
+    randomBtn.addEventListener('click', function(){
+        const target = items[Math.floor(Math.random() * items.length)];
+        const top = galleryBox.getBoundingClientRect().top + window.scrollY - 120;
+
+        window.scrollTo({ top: top, behavior: 'smooth' });
+        focusItem(target);
+    });
+})();
+</script>
+<script src="./js/site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+/* ================= 校园活动 · 时间轴与活动弹窗 ================= */
+
+.timeline-wrap{
+    position:relative;
+    padding:20px 0;
+}
+
+.timeline-line{
+    position:absolute;
+    left:22px;
+    top:0;
+    bottom:0;
+    width:2px;
+    background:linear-gradient(180deg,#3474A6,#FFD55A);
+}
+
+.timeline-item{
+    position:relative;
+    padding-left:64px;
+    margin-bottom:40px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.timeline-item:hover{
+    transform:translateX(6px);
+}
+
+.timeline-dot{
+    width:24px;
+    height:24px;
+    border-radius:50%;
+    background:#FFD55A;
+    border:3px solid #3474A6;
+    position:absolute;
+    left:12px;
+    top:4px;
+    z-index:2;
+}
+
+.timeline-card{
+    background:#fff;
+    border-radius:14px;
+    padding:24px;
+    box-shadow:0 6px 18px rgba(31,78,121,.12);
+    border-left:4px solid #3474A6;
+}
+
+.timeline-card h3{
+    color:#1F4E79;
+    margin-bottom:8px;
+}
+
+.timeline-tag{
+    display:inline-block;
+    padding:3px 10px;
+    background:rgba(255,213,90,.18);
+    color:#98341F;
+    border-radius:99px;
+    font-size:13px;
+    margin-bottom:12px;
+}
+
+.modal-mask{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.55);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    z-index:999;
+    padding:20px;
+}
+
+.modal-mask.show{
+    display:flex;
+}
+
+.modal-box{
+    width:min(720px,100%);
+    background:#fff;
+    border-radius:16px;
+    overflow:hidden;
+    animation:pop .3s ease;
+}
+
+@keyframes pop{
+    from{opacity:0;transform:scale(.94);}
+    to{opacity:1;transform:scale(1);}
+}
+
+.modal-img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+}
+
+.modal-body{
+    padding:28px;
+}
+
+.modal-close{
+    margin-top:16px;
+    padding:9px 20px;
+    border:none;
+    background:#3474A6;
+    color:#fff;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.fu-sign-box{
+    background:linear-gradient(135deg,#F7FAFF,#FFF8E8);
+    border-radius:14px;
+    padding:32px 24px;
+    text-align:center;
+    margin-top:48px;
+}
+
+.fu-sign-btn{
+    padding:12px 26px;
+    border:none;
+    background:linear-gradient(135deg,#3474A6,#1F4E79);
+    color:#fff;
+    border-radius:99px;
+    font-size:16px;
+    cursor:pointer;
+    margin:12px 0;
+}
+
+.fu-sign-text{
+    font-family:"STKaiti",KaiTi,serif;
+    font-size:20px;
+    color:#1F4E79;
+    min-height:60px;
+    padding-top:12px;
+}
+
+@media (max-width:768px){
+    .timeline-item{
+        padding-left:48px;
+    }
+
+    .timeline-dot{
+        left:6px;
+    }
+
+    .timeline-line{
+        left:16px;
+    }
+
+    .modal-img{
+        height:200px;
+    }
+}

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 84" fill="none">
+  <defs>
+    <linearGradient id="tower" x1="20" y1="24" x2="58" y2="70" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3D82B4"/><stop offset="1" stop-color="#1A4B6E"/>
+    </linearGradient>
+    <linearGradient id="gate" x1="172" y1="30" x2="232" y2="70" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3D82B4"/><stop offset="1" stop-color="#1A4B6E"/>
+    </linearGradient>
+    <linearGradient id="wave" x1="6" y1="72" x2="234" y2="72" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8DE3F2"/><stop offset=".48" stop-color="#D6B166"/><stop offset="1" stop-color="#3474A6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Min River -->
+  <path d="M6 71Q20 63 34 71T62 71T90 71T118 71T146 71T174 71T202 71T234 71V84H6Z" fill="#8DE3F2" opacity=".08"/>
+  <path d="M6 71Q20 63 34 71T62 71T90 71T118 71T146 71T174 71T202 71T234 71" stroke="url(#wave)" stroke-width="2.2"/>
+  <path d="M12 77Q26 69 40 77T68 77T96 77T124 77T152 77T180 77T208 77T232 77" stroke="#D6B166" stroke-width="1.2" opacity=".7"/>
+
+  <!-- Clock tower -->
+  <g>
+    <rect x="10" y="68" width="58" height="6" rx="1" fill="#153F60"/>
+    <rect x="14" y="64" width="50" height="4" rx="1" fill="#2A6390"/>
+    <rect x="20" y="32" width="38" height="33" rx="2" fill="url(#tower)"/>
+    <rect x="25" y="24" width="28" height="8" rx="1" fill="#153F60"/>
+    <rect x="36" y="14" width="6" height="10" rx="1" fill="#3474A6"/>
+    <circle cx="39" cy="19" r="2.2" fill="#D6B166"/>
+    <rect x="26" y="38" width="8" height="6" rx="1" fill="#D6B166"/>
+    <rect x="44" y="38" width="8" height="6" rx="1" fill="#D6B166"/>
+    <rect x="26" y="48" width="8" height="6" rx="1" fill="#D6B166"/>
+    <rect x="44" y="48" width="8" height="6" rx="1" fill="#D6B166"/>
+    <rect x="26" y="58" width="8" height="5" rx="1" fill="#D6B166"/>
+    <rect x="44" y="58" width="8" height="5" rx="1" fill="#D6B166"/>
+  </g>
+
+  <!-- Fu seal -->
+  <g>
+    <circle cx="120" cy="42" r="31" fill="#081A2A" stroke="#D6B166" stroke-width="2.4"/>
+    <circle cx="120" cy="42" r="26" stroke="#D6B166" stroke-width="1" opacity=".5"/>
+    <path d="M120 21L138 31V53L120 63L102 53V31Z" fill="#A63B26"/>
+    <path transform="translate(103.5 53.9) scale(.131 -.131)" fill="#F3ECDF" d="M135 12Q133 -4 130.0 -2.0Q127 0 125.0 11.5Q123 23 120.5 44.0Q118 65 116.0 70.0Q114 75 111.0 80.5Q108 86 113.5 85.5Q119 85 124.0 83.5Q129 82 145.0 84.5Q161 87 179.5 90.0Q198 93 205.0 96.0Q212 99 220.5 96.5Q229 94 236.0 89.5Q243 85 239.0 79.5Q235 74 233.0 63.5Q231 53 229.5 33.0Q228 13 220.0 0.0Q212 -13 209.5 -5.5Q207 2 203 15Q183 18 165.5 15.5Q148 13 135 12ZM81 82V41Q81 15 78.0 -0.5Q75 -16 69.0 -5.5Q63 5 66.0 17.5Q69 30 70.0 45.5Q71 61 71 84Q55 62 42.0 50.0Q29 38 17.0 31.5Q5 25 19.0 39.0Q33 53 46.5 70.5Q60 88 70.0 105.0Q80 122 80 124Q80 126 61.5 119.5Q43 113 35.0 111.0Q27 109 18.5 116.0Q10 123 23 123Q36 123 49.0 125.5Q62 128 69.0 131.0Q76 134 80.5 138.0Q85 142 90.5 140.0Q96 138 102.0 133.5Q108 129 100.5 124.5Q93 120 76 92Q96 90 101.0 84.0Q106 78 104.0 71.5Q102 65 96.0 69.5Q90 74 81 82ZM148 108Q145 95 141.0 103.0Q137 111 133.5 120.5Q130 130 125.0 136.5Q120 143 125 143Q131 143 137.5 141.5Q144 140 154.5 142.5Q165 145 173.0 147.0Q181 149 186.5 152.5Q192 156 199.0 153.5Q206 151 211.0 147.0Q216 143 211.0 140.0Q206 137 198 123Q206 114 195.0 113.5Q184 113 148 108ZM176 48 175 25Q189 28 195.0 27.5Q201 27 205.0 22.0Q209 17 211.0 24.5Q213 32 214.5 49.0Q216 66 215.0 75.5Q214 85 208.0 86.0Q202 87 171 82Q179 75 178.0 71.5Q177 68 176 60Q185 62 191.0 63.0Q197 64 201.0 59.5Q205 55 198.5 53.0Q192 51 176 48ZM163 23V47Q149 45 142.5 49.0Q136 53 143.5 54.0Q151 55 163 58Q163 70 160 80L131 74Q132 46 134 18ZM188 122Q189 135 188.5 139.0Q188 143 181.5 141.5Q175 140 144 134L147 114Q175 119 188 122ZM170 181Q195 190 204.0 187.0Q213 184 207.0 179.5Q201 175 178.0 169.5Q155 164 143.5 168.5Q132 173 142.0 174.5Q152 176 170 181ZM66 182Q58 191 74.5 190.0Q91 189 96.0 181.0Q101 173 98.5 167.0Q96 161 85.0 167.5Q74 174 66 182Z"/>
+    <path d="M99 14h8v3h4v-3h7v5H99Z" fill="#D6B166" opacity=".8"/>
+    <path d="M122 14h7v3h4v-3h8v5h-19Z" fill="#D6B166" opacity=".8"/>
+  </g>
+
+  <!-- Saddle-wall gate -->
+  <g>
+    <path d="M168 68V48h8V36h12v12h14V30h12v18h8v20Z" fill="url(#gate)"/>
+    <path d="M196 68V55c0-4 3-7 7-7s7 3 7 7v13Z" fill="#081A2A"/>
+    <rect x="179" y="46" width="4" height="12" fill="#D6B166"/>
+    <rect x="217" y="46" width="4" height="12" fill="#D6B166"/>
+    <rect x="187" y="51" width="5" height="5" rx="1" fill="#D6B166"/>
+    <rect x="207" y="51" width="5" height="5" rx="1" fill="#D6B166"/>
+    <rect x="168" y="68" width="68" height="6" rx="1" fill="#153F60"/>
+  </g>
+
+  <path d="M4 42h7M229 42h7" stroke="#8DE3F2" stroke-width="1" opacity=".55"/>
+</svg>

@@ -1,0 +1,180 @@
+/* ================= 关于我们 · 玻璃面板与角标 ================= */
+
+body.about{
+    background-color:#F5F8FB;
+    background-image:
+        linear-gradient(rgba(52,116,166,.045) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(52,116,166,.045) 1px,transparent 1px);
+    background-size:28px 28px;
+}
+
+.about-wrap{
+    position:relative;
+    padding:72px 0 76px;
+    overflow:hidden;
+}
+
+.about-bg-grid{
+    position:absolute;
+    inset:0;
+    background-image:
+        linear-gradient(rgba(52,116,166,.06) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(52,116,166,.06) 1px,transparent 1px);
+    background-size:32px 32px;
+    z-index:-2;
+}
+
+.about-glow{
+    position:absolute;
+    width:440px;
+    height:440px;
+    background:radial-gradient(circle,rgba(255,213,90,.15) 0%,transparent 70%);
+    right:-130px;
+    top:60px;
+    z-index:-1;
+    pointer-events:none;
+}
+
+.about-glow.blue{
+    left:-150px;
+    bottom:30px;
+    background:radial-gradient(circle,rgba(52,116,166,.13) 0%,transparent 70%);
+}
+
+.about-head{
+    margin-bottom:26px;
+}
+
+.about-head .rubric{
+    display:inline-block;
+    padding-bottom:6px;
+    margin-bottom:12px;
+    font-family:var(--font-label);
+    font-size:11px;
+    letter-spacing:.2em;
+    color:#3474A6;
+    border-bottom:2px solid #FFD55A;
+}
+
+.about-head h1{
+    margin:0 0 12px;
+    font-family:'Songti SC','SimSun','STSong',serif;
+    font-size:clamp(28px,4vw,42px);
+    line-height:1.2;
+    letter-spacing:.06em;
+    color:#1F4E79;
+    text-shadow:3px 3px 0 rgba(255,213,90,.55);
+}
+
+.about-head p{
+    max-width:720px;
+    margin:0;
+    padding-left:16px;
+    border-left:3px solid #FFD55A;
+    font-size:14px;
+    line-height:1.9;
+    color:#2B4C63;
+}
+
+.about-panel{
+    position:relative;
+    padding:40px 40px 34px;
+    background:rgba(255,255,255,.78);
+    -webkit-backdrop-filter:blur(12px);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(52,116,166,.18);
+    box-shadow:0 10px 34px rgba(31,78,121,.1);
+}
+
+.corner-rt,
+.corner-lb,
+.corner-lt,
+.corner-rb{
+    position:absolute;
+    width:46px;
+    height:46px;
+    border-color:#FFD55A;
+    border-style:solid;
+    pointer-events:none;
+}
+
+.corner-lt{top:16px;left:16px;border-width:2px 0 0 2px;}
+.corner-rt{top:16px;right:16px;border-width:2px 2px 0 0;}
+.corner-lb{bottom:16px;left:16px;border-width:0 0 2px 2px;}
+.corner-rb{bottom:16px;right:16px;border-width:0 2px 2px 0;}
+
+.about-item{
+    margin-bottom:30px;
+}
+
+.about-item h3{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin:0 0 12px;
+    font-family:'Songti SC','SimSun',serif;
+    font-size:19px;
+    letter-spacing:.05em;
+    color:#1F4E79;
+}
+
+.about-item h3 svg{
+    width:24px;
+    height:24px;
+    flex:0 0 auto;
+}
+
+.about-item p{
+    margin:0;
+    font-size:14px;
+    line-height:1.95;
+    color:#333;
+    text-align:justify;
+}
+
+.divider-line{
+    width:100%;
+    height:1px;
+    margin:26px 0;
+    background:linear-gradient(90deg,transparent,#3474A6,#FFD55A,#3474A6,transparent);
+}
+
+.team-tag{
+    display:inline-block;
+    padding:5px 14px;
+    margin:4px 8px 4px 0;
+    font-size:13.5px;
+    color:#fff;
+    background:linear-gradient(135deg,#3474A6,#1F4E79);
+    border-radius:999px;
+    box-shadow:0 4px 12px rgba(31,78,121,.22);
+}
+
+.tip-text{
+    margin-top:20px;
+    padding:14px 18px;
+    font-size:14px;
+    line-height:1.85;
+    color:#2B4C63;
+    background:rgba(255,213,90,.14);
+    border-left:3px solid #FFD55A;
+    border-radius:0 8px 8px 0;
+}
+
+@media (max-width:768px){
+    .about-panel{
+        padding:26px 22px 24px;
+    }
+
+    .about-glow{
+        display:none;
+    }
+
+    .corner-rt,
+    .corner-lb,
+    .corner-lt,
+    .corner-rb{
+        width:32px;
+        height:32px;
+    }
+}

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#081A2A">
+    <meta name="description" content="校园文化节、社团活动与文体赛事时间轴，并可抽取一支校园福签。">
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="福韵校园·福满榕城">
+    <meta property="og:description" content="福州外语外贸学院福文化主题网站：数字文化刊物与轻量 HUD 信息界面。">
+    <meta property="og:image" content="./assets/og-cover.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>校园活动 | 福韵校园·福满榕城</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/hud.css">
+    <link rel="stylesheet" href="./css/building.css">
+    <link rel="stylesheet" href="./css/activity.css">
+    <link rel="stylesheet" href="./css/theme-v2.css">
+</head>
+<body class="building">
+
+<header class="hud-header">
+    <div class="container nav-wrap">
+        <a class="logo logo-emblem-lockup" href="index.html" aria-label="福韵校园·福满榕城首页" title="福韵校园·福满榕城">
+            <img class="logo-emblem" src="./assets/logo-emblem.svg" alt="" width="240" height="84">
+            <span class="logo-word"><b>福韵校园</b><em>福满榕城</em></span>
+        </a>
+
+        <nav aria-label="主导航">
+            <ul class="nav-list">
+                <li><a href="index.html"><i>01</i>首页</a></li>
+                <li><a href="campus.html" class="active"><i>02</i>校园福韵</a></li>
+                <li><a href="fuzhou.html"><i>03</i>福满榕城</a></li>
+                <li><a href="experience.html"><i>04</i>福文化体验</a></li>
+                <li><a href="about.html"><i>05</i>关于我们</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container hero-inner">
+        <div>
+            <div class="hud-line">
+                <span class="dot"></span>SYS://FZFU-ACTIVITY · 02.2
+                <span class="hud-coords" aria-hidden="true">NODE · CAMPUS / SIG ▮▮▮▯</span>
+            </div>
+            <a href="campus.html" class="crumb">← 返回校园福韵</a>
+            <h1>校园活动·聚福时刻</h1>
+            <p class="lead">
+                以活动为媒，以青春为序。一场场热闹的校园活动，让福文化在欢声笑语里传递，把福气汇聚在每一次相遇之中。
+            </p>
+        </div>
+        <div class="hero-tags">
+            <span>ACTIVITY · YOUTH</span>
+            <span>GATHER · BLESSING</span>
+        </div>
+    </div>
+</section>
+
+<section class="container">
+    <div class="sec-head">
+        <div>
+            <span class="rubric">TIMELINE / 活动时光轴</span>
+            <h2>丰富多彩的校园聚福活动</h2>
+        </div>
+        <span class="hint">点击条目，查看活动详情</span>
+    </div>
+
+    <div class="timeline-wrap">
+        <div class="timeline-line"></div>
+
+        <div class="timeline-item" data-key="culture">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+                <span class="timeline-tag">文化类 · 纳福</span>
+                <h3>校园文化节</h3>
+                <p>融福文化、非遗、民俗于一体的主题文化盛会，营造浓厚的人文氛围。</p>
+            </div>
+        </div>
+
+        <div class="timeline-item" data-key="club">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+                <span class="timeline-tag">兴趣类 · 结伴福</span>
+                <h3>社团特色活动</h3>
+                <p>各类社团轮番开展分享、创作、实践活动，找到同频伙伴，一起奔赴热爱。</p>
+            </div>
+        </div>
+
+        <div class="timeline-item" data-key="sport">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+                <span class="timeline-tag">文体类 · 活力福</span>
+                <h3>文体赛事与晚会</h3>
+                <p>赛场拼搏、舞台绽放，在热烈的氛围里展现福外青年昂扬向上的风采。</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 福签抽签板块 -->
+    <div class="fu-sign-box">
+        <h3>抽取校园福签</h3>
+        <p>收下属于你的校园活动祝福，愿青春热烈，万事顺遂</p>
+        <button class="fu-sign-btn" id="getSign">抽签纳福</button>
+        <div class="fu-sign-text" id="signText"></div>
+    </div>
+</section>
+
+<section class="closing">
+    <div class="container">
+        <div class="closing-panel">
+            <span class="rubric">SUMMARY / 活动寄语</span>
+            <h2>相聚即是福，青春自发光</h2>
+            <p>校园活动是课堂之外的成长课堂。福州外语外贸学院将福文化融入各类文体、文化、社团活动之中，让同学们在参与、协作、表达中收获友谊、增长才干。</p>
+            <p>每一次相聚，都是一场福气的相逢；每一次参与，都是青春独有的闪亮印记。</p>
+            <a href="campus.html" class="back">← 返回校园福韵</a>
+        </div>
+    </div>
+</section>
+
+<!-- 弹窗 -->
+<div class="modal-mask" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-box">
+        <img loading="lazy" decoding="async" class="modal-img" id="modalImg" alt="">
+        <div class="modal-body">
+            <h3 id="modalTitle"></h3>
+            <p id="modalDesc"></p>
+            <button class="modal-close" id="closeModal">关闭</button>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <p>福韵校园·福满榕城 © 2026 | 福州外语外贸学院 · 福文化主题网站</p>
+            <p>V2.1 · 数字文化刊物 / 福州福文化数字展陈</p>
+    </div>
+</footer>
+
+<script>
+(function(){
+    const data = {
+        culture:{
+            img:"image/webp/文化活动-1600.webp",
+            title:"校园文化节",
+            desc:"校园文化节是福文化展示的重要舞台。活动融合传统民俗、福字文创、非遗体验、主题宣讲，让同学们近距离感受福文化的深厚底蕴，在沉浸式体验中感悟‘平安有福’的美好内涵。"
+        },
+        club:{
+            img:"image/webp/社团活动-1600.webp",
+            title:"社团活动",
+            desc:"书画、志愿、文艺、科创等社团百花齐放。大家在这里交流兴趣、协同创作，在陪伴中收获友谊。志同道合的相遇，是青春里难得的欢喜之福。"
+        },
+        sport:{
+            img:"image/webp/文体-1600.webp",
+            title:"文体赛事",
+            desc:"运动会、文艺汇演、合唱比赛轮番上演。赛场挥洒汗水，舞台尽情发光，青年的朝气与活力，就是校园最动人的福气风景。"
+        }
+    };
+    const signList = [
+        "积极参与，收获满满，学业活动两相宜",
+        "良友相伴，兴致盎然，岁岁皆有新惊喜",
+        "登台出彩，自信生长，前路闪闪发光",
+        "心怀热爱，步履不停，处处皆是好光景",
+        "聚是一团火，散是满天星，青春自有荣光"
+    ];
+
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modalImg');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDesc = document.getElementById('modalDesc');
+    const closeModal = document.getElementById('closeModal');
+    const items = document.querySelectorAll('.timeline-item');
+    const getSignBtn = document.getElementById('getSign');
+    const signText = document.getElementById('signText');
+
+    function srcsetFor(src){
+        const base = src.replace(/-1600\.webp$/, '');
+        return base + '-640.webp 640w, ' + base + '-1024.webp 1024w, ' + src + ' 1600w';
+    }
+
+    let lastFocus = null;
+
+    function openModal(item, d){
+        lastFocus = item;
+        modalImg.src = d.img;
+        modalImg.srcset = srcsetFor(d.img);
+        modalImg.sizes = '(max-width: 720px) 92vw, 720px';
+        modalImg.alt = d.title;
+        modalTitle.textContent = d.title;
+        modalDesc.textContent = d.desc;
+        modal.classList.add('show');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        closeModal.focus();
+    }
+
+    function closeModalBox(){
+        modal.classList.remove('show');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        if (lastFocus) lastFocus.focus();
+    }
+
+    items.forEach(item=>{
+        item.addEventListener('click',()=>{
+            openModal(item, data[item.dataset.key]);
+        })
+    })
+    closeModal.onclick = closeModalBox;
+    modal.onclick = (e)=>{if(e.target === modal) closeModalBox();}
+    document.addEventListener('keydown', (e)=>{
+        if(e.key === 'Escape' && modal.classList.contains('show')) closeModalBox();
+    });
+    modal.addEventListener('keydown', (e)=>{
+        if(e.key !== 'Tab' || !modal.classList.contains('show')) return;
+        const focusable = modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+        if(!focusable.length) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if(e.shiftKey && document.activeElement === first){
+            e.preventDefault();
+            last.focus();
+        }else if(!e.shiftKey && document.activeElement === last){
+            e.preventDefault();
+            first.focus();
+        }
+    });
+
+    getSignBtn.onclick = ()=>{
+        const random = signList[Math.floor(Math.random()*signList.length)];
+        signText.innerText = random;
+    }
+})();
+</script>
+<script src="./js/site.js" defer></script>
+</body>
+</html>
